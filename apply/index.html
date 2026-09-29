@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>参加お申し込み｜社長のお金の勉強会（足柄上商工会）</title>
+<meta name="description" content="社長のお金の勉強会（全3回）のお申し込みページです。12/3・12/8・12/11 各15:00〜16:30、足柄上商工会2階＋オンライン。参加無料。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="参加お申し込み｜社長のお金の勉強会（全3回）">
+<meta property="og:description" content="1分で終わります。1回だけの参加もOK、会場かオンラインを選べます。参加無料。">
+<meta property="og:image" content="https://mm738966m-boop.github.io/ashigarakami-seminar/img/ogp.jpg">
+<meta property="og:url" content="https://mm738966m-boop.github.io/ashigarakami-seminar/apply/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="robots" content="noindex">
+<style>
+  :root{--navy:#14294a;--gold:#a8791f;--gold2:#e2c27a;--gold3:#c9a14a;--cream:#fbf6ea;--paper:#fffdf8;--ink:#1b2433;--soft:#4a5466;--line:#e3dac6;--wash:#f1f4f9;--green:#06C755;--green2:#05b34c;--err:#b3261e;
+    --serif:"Hiragino Mincho ProN","Yu Mincho",serif;--gothic:"Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic","Meiryo",sans-serif}
+  *{box-sizing:border-box}
+  html{color-scheme:light}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--gothic);font-size:18px;font-weight:500;line-height:1.8;font-feature-settings:"palt" 1}
+  .wrap{max-width:640px;margin:0 auto;padding:0 18px}
+  .nb{display:inline-block}
+  header.top{background:var(--navy) url('../img/hero.jpg') center 30%/cover;position:relative;color:#fff}
+  header.top::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,24,48,.72),rgba(10,24,48,.93))}
+  header.top .wrap{position:relative;padding:22px 18px 26px}
+  .brand{font-size:14.5px;font-weight:700;color:var(--gold2);letter-spacing:.06em}
+  h1{font-family:var(--serif);font-size:clamp(26px,7vw,32px);line-height:1.4;margin:6px 0 8px}
+  .lead{margin:0;font-size:16.5px;color:#e6ebf3;line-height:1.7}
+  .lead b{color:#fff}
+  .back{display:inline-block;margin-top:10px;color:#fff;font-size:15px;opacity:.9}
+
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:22px 0 18px}
+  .steps div{text-align:center;font-size:14.5px;font-weight:800;color:#9aa1ad}
+  .steps div::before{content:"";display:block;height:6px;border-radius:9px;background:#e4e6ea;margin-bottom:6px}
+  .steps div.on{color:var(--navy)}
+  .steps div.on::before{background:var(--gold3)}
+  .steps div.done::before{background:var(--navy)}
+
+  .card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px 18px 24px;box-shadow:0 6px 22px rgba(20,41,74,.06)}
+  .card h2{font-family:var(--serif);font-size:23px;color:var(--navy);margin:0 0 6px;line-height:1.45}
+  .card .help{margin:0 0 16px;font-size:16px;color:var(--soft);line-height:1.7}
+  .step{display:none}
+  .step.show{display:block;animation:fade .3s ease}
+  @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  @media (prefers-reduced-motion:reduce){.step.show{animation:none}}
+
+  /* 回の選択 */
+  .round{border:1.5px solid var(--line);border-radius:16px;padding:14px 14px 16px;margin-top:14px;transition:border-color .15s,background .15s}
+  .round.picked{border-color:var(--gold3);background:#fffaf0}
+  .round .rh{display:flex;align-items:center;gap:12px;margin-bottom:10px}
+  .round .dt{flex:0 0 auto;background:var(--navy);color:#fff;border-radius:12px;padding:6px 8px;text-align:center;line-height:1.2;min-width:72px}
+  .round .dt small{display:block;font-size:13.5px;color:var(--gold2);font-weight:800}
+  .round .dt b{font-size:21px}
+  .round .th{font-weight:800;color:var(--navy);line-height:1.5;font-size:16px}
+  .round .th span{display:block;font-size:14px;color:var(--soft);font-weight:700}
+  .opts{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px}
+  .opt{position:relative}
+  .opt input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+  .opt span{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;min-height:64px;border:1.5px solid #cfd4dc;border-radius:12px;background:#fff;font-weight:800;font-size:15.5px;color:var(--ink);text-align:center;line-height:1.3;padding:6px 2px;transition:all .15s;white-space:nowrap}
+  .opt span i{font-style:normal;font-size:20px;line-height:1}
+  .opt input:checked+span{border-color:var(--navy);background:var(--navy);color:#fff}
+  .opt.no span{font-size:14.5px;letter-spacing:-.02em}
+  .opt.no input:checked+span{border-color:#9aa1ad;background:#eef0f3;color:var(--soft)}
+  .opt input:focus-visible+span{outline:3px solid var(--gold3);outline-offset:2px}
+
+  /* 入力欄 */
+  .field{margin-top:18px}
+  .field label.lb,.field .lb{display:flex;align-items:center;gap:8px;font-weight:800;color:var(--navy);font-size:17px}
+  .req,.opt-tag{font-size:13.5px;font-weight:800;border-radius:6px;padding:0 7px;line-height:1.7}
+  .req{background:#fdecea;color:var(--err)}
+  .opt-tag{background:#eef0f3;color:var(--soft)}
+  .field .note{font-size:14.5px;color:var(--soft);margin:2px 0 0;line-height:1.6}
+  input[type=text],input[type=tel],input[type=email],textarea{width:100%;margin-top:6px;font:inherit;font-size:18px;color:var(--ink);background:#fff;border:1.5px solid #cfd4dc;border-radius:12px;padding:12px 14px;outline:none;transition:border-color .15s,box-shadow .15s}
+  textarea{min-height:120px;resize:vertical;line-height:1.7}
+  input:focus,textarea:focus{border-color:var(--navy);box-shadow:0 0 0 3px rgba(20,41,74,.12)}
+  .field.bad input,.field.bad textarea{border-color:var(--err);background:#fffafa}
+  .err{display:none;color:var(--err);font-size:14.5px;font-weight:700;margin-top:4px}
+  .field.bad .err,.block.bad .err{display:block}
+  .nums{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:6px}
+  .nums .opt span{min-height:52px;font-size:17px}
+  .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+
+  /* 確認 */
+  .sum{border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-top:6px}
+  .sum dl{margin:0;display:grid;grid-template-columns:7.2em 1fr}
+  .sum dt,.sum dd{margin:0;padding:10px 12px;border-bottom:1px solid #eee9dc;font-size:16px;line-height:1.6}
+  .sum dt{background:var(--cream);color:var(--navy);font-weight:800}
+  .sum dd{word-break:break-all}
+  .sum dl>*:nth-last-child(-n+2){border-bottom:0}
+  .edit{background:none;border:0;color:var(--gold);font:inherit;font-size:15px;font-weight:800;text-decoration:underline;cursor:pointer;padding:0;margin-top:8px}
+  .agree{display:flex;gap:12px;align-items:flex-start;margin-top:20px;background:var(--wash);border-radius:14px;padding:14px}
+  .agree input{width:26px;height:26px;flex:0 0 auto;margin-top:2px;accent-color:var(--navy)}
+  .agree p{margin:0;font-size:15px;line-height:1.7;color:var(--soft)}
+  .agree b{display:block;color:var(--navy);font-size:16.5px}
+  .block.bad .agree{outline:2px solid var(--err)}
+  .alert{display:none;margin-top:16px;background:#fdecea;color:var(--err);border-radius:12px;padding:12px 14px;font-weight:700;font-size:15.5px;line-height:1.7}
+  .alert.show{display:block}
+
+  /* 完了 */
+  .done{text-align:center}
+  .done .big{font-size:56px;line-height:1}
+  .done h2{margin-top:10px}
+  .done ul{list-style:none;padding:0;margin:14px 0 0;text-align:left}
+  .done li{border:1px solid var(--line);border-radius:14px;padding:12px 14px;margin-top:10px;background:#fff}
+  .done li b{color:var(--navy);display:block;font-size:17px}
+  .done li span{display:block;font-size:15px;color:var(--soft);line-height:1.6}
+  .done li span.when{font-size:16px;color:var(--ink);font-weight:700;margin:2px 0}
+  .done .mail{font-weight:800;color:var(--navy);word-break:break-all}
+  .cal{display:inline-block;margin-top:10px;font-size:15px;font-weight:800;color:var(--navy);border:1.5px solid var(--navy);border-radius:99px;padding:4px 14px;text-decoration:none}
+  .done .next{margin-top:18px;background:var(--cream);border-radius:14px;padding:14px 16px;text-align:left;font-size:16px;line-height:1.75}
+
+  .foot{font-size:14.5px;color:var(--soft);text-align:center;line-height:1.8;padding:26px 0 150px}
+  .foot a{color:var(--soft)}
+
+  /* 下の固定ボタン */
+  .bar{position:fixed;left:0;right:0;bottom:0;background:rgba(255,253,248,.97);box-shadow:0 -4px 18px rgba(0,0,0,.08);padding:10px 16px 12px;z-index:10}
+  .bar .in{max-width:640px;margin:0 auto;display:flex;gap:10px;align-items:center}
+  .btn{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:58px;background:var(--green);color:#fff;border:0;border-radius:999px;font:inherit;font-size:19.5px;font-weight:900;letter-spacing:.02em;cursor:pointer;box-shadow:0 8px 20px rgba(6,199,85,.3);transition:background .15s}
+  .btn:hover{background:var(--green2)}
+  .btn:disabled{opacity:.6;cursor:wait}
+  .btn:focus-visible,.prev:focus-visible{outline:3px solid var(--navy);outline-offset:3px}
+  .prev{flex:0 0 auto;min-height:58px;padding:0 18px;border:1.5px solid #cfd4dc;background:#fff;border-radius:999px;font:inherit;font-size:16.5px;font-weight:800;color:var(--soft);cursor:pointer}
+  .bar .memo{max-width:640px;margin:6px auto 0;text-align:center;font-size:13.5px;color:var(--soft)}
+  .hide{display:none!important}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <div class="brand">足柄上商工会／社長のお金の勉強会</div>
+    <h1>参加お申し込み</h1>
+    <p class="lead">入力は<b>約1分</b>です。<br>参加無料・1回だけの参加もできます。</p>
+    <a class="back" href="../">← 勉強会の案内ページに戻る</a>
+  </div>
+</header>
+
+<main class="wrap">
+  <noscript><p class="card" style="margin-top:20px">このページは JavaScript を使っています。<br>お手数ですが、FAX（0465-83-3213）またはメール（bansoushien@ashigarakami-sci.net）でお申し込みください。</p></noscript>
+
+  <div class="steps" id="steps" aria-hidden="true"><div class="on">参加する回</div><div>お客様情報</div><div>確認・送信</div></div>
+
+  <form id="f" novalidate>
+    <!-- STEP 1 -->
+    <section class="step show card" data-step="1" aria-labelledby="s1">
+      <h2 id="s1">参加する回を選んでください</h2>
+      <p class="help">気になる回だけで大丈夫です。<br>回ごとに「会場」か「オンライン」を選べます。</p>
+
+      <div class="round" data-r="r1">
+        <div class="rh"><div class="dt"><small>第1回</small><b>12/3</b>（木）</div><div class="th">社長の財布と、<br>会社の財布<span>15:00〜16:30</span></div></div>
+        <div class="opts" role="radiogroup" aria-label="第1回の参加方法">
+          <label class="opt"><input type="radio" name="r1" value="会場で参加"><span><i>🏢</i>会場</span></label>
+          <label class="opt"><input type="radio" name="r1" value="オンラインで参加"><span><i>💻</i>オンライン</span></label>
+          <label class="opt no"><input type="radio" name="r1" value="参加しない"><span><i>－</i>参加しない</span></label>
+        </div>
+      </div>
+      <div class="round" data-r="r2">
+        <div class="rh"><div class="dt"><small>第2回</small><b>12/8</b>（火）</div><div class="th">社長が倒れた翌日、<br>会社で何が起きるか<span>15:00〜16:30</span></div></div>
+        <div class="opts" role="radiogroup" aria-label="第2回の参加方法">
+          <label class="opt"><input type="radio" name="r2" value="会場で参加"><span><i>🏢</i>会場</span></label>
+          <label class="opt"><input type="radio" name="r2" value="オンラインで参加"><span><i>💻</i>オンライン</span></label>
+          <label class="opt no"><input type="radio" name="r2" value="参加しない"><span><i>－</i>参加しない</span></label>
+        </div>
+      </div>
+      <div class="round" data-r="r3">
+        <div class="rh"><div class="dt"><small>第3回</small><b>12/11</b>（金）</div><div class="th">辞めない会社、<br>揉めない家族<span>15:00〜16:30</span></div></div>
+        <div class="opts" role="radiogroup" aria-label="第3回の参加方法">
+          <label class="opt"><input type="radio" name="r3" value="会場で参加"><span><i>🏢</i>会場</span></label>
+          <label class="opt"><input type="radio" name="r3" value="オンラインで参加"><span><i>💻</i>オンライン</span></label>
+          <label class="opt no"><input type="radio" name="r3" value="参加しない"><span><i>－</i>参加しない</span></label>
+        </div>
+      </div>
+      <p class="note" style="margin:14px 0 0;font-size:15px;color:var(--soft)">会場：足柄上商工会 2階<br>（松田町松田惣領2083-2）<br>オンライン：参加用URLを<br>メールでお送りします。</p>
+      <div class="alert" id="a1">参加する回を、1つ以上選んでください。</div>
+    </section>
+
+    <!-- STEP 2 -->
+    <section class="step card" data-step="2" aria-labelledby="s2">
+      <h2 id="s2">お客様の情報を教えてください</h2>
+      <p class="help">当日の受付と、ご連絡に使います。</p>
+      <div class="field" data-k="biz"><label class="lb" for="biz">事業所名 <span class="req">必須</span></label><input type="text" id="biz" name="biz" autocomplete="organization" placeholder="例：〇〇工務店"><div class="err">事業所名を入力してください</div></div>
+      <div class="field" data-k="gyo"><label class="lb" for="gyo">業種 <span class="opt-tag">任意</span></label><input type="text" id="gyo" name="gyo" placeholder="例：建設業、飲食業"></div>
+      <div class="field" data-k="name"><label class="lb" for="name">お名前 <span class="req">必須</span></label><input type="text" id="name" name="name" autocomplete="name" placeholder="例：山田 太郎"><div class="err">お名前を入力してください</div></div>
+      <div class="field" data-k="kana"><label class="lb" for="kana">ふりがな <span class="req">必須</span></label><input type="text" id="kana" name="kana" placeholder="例：やまだ たろう"><div class="err">ふりがなを入力してください</div></div>
+      <div class="field block" data-k="num"><span class="lb">ご参加人数 <span class="req">必須</span></span>
+        <p class="note">ご家族・後継ぎの方、<br>従業員の方もご一緒にどうぞ。</p>
+        <div class="nums" role="radiogroup" aria-label="ご参加人数">
+          <label class="opt"><input type="radio" name="num" value="1名" checked><span>1名</span></label>
+          <label class="opt"><input type="radio" name="num" value="2名"><span>2名</span></label>
+          <label class="opt"><input type="radio" name="num" value="3名"><span>3名</span></label>
+          <label class="opt"><input type="radio" name="num" value="4名以上"><span>4名<br>以上</span></label>
+        </div>
+      </div>
+      <div class="field hide" data-k="comp" id="compBox"><label class="lb" for="comp">ご一緒に参加される方 <span class="opt-tag">任意</span></label><p class="note">お名前とご関係を教えてください。</p><input type="text" id="comp" name="comp" placeholder="例：山田 花子（妻）、佐藤 一郎（従業員）"></div>
+      <div class="field" data-k="tel"><label class="lb" for="tel">電話番号 <span class="req">必須</span></label><input type="tel" id="tel" name="tel" autocomplete="tel" inputmode="tel" placeholder="例：090-1234-5678"><div class="err">電話番号を入力してください</div></div>
+      <div class="field" data-k="mail"><label class="lb" for="mail">メールアドレス <span class="req">必須</span></label><p class="note">オンラインの参加URLと、見逃した回の録画のご案内をお送りします。</p><input type="email" id="mail" name="mail" autocomplete="email" inputmode="email" placeholder="例：yamada@example.com"><div class="err">メールアドレスを正しく入力してください</div></div>
+      <div class="hp" aria-hidden="true"><label>この欄は空のままにしてください<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+    </section>
+
+    <!-- STEP 3 -->
+    <section class="step card" data-step="3" aria-labelledby="s3">
+      <h2 id="s3">最後に、内容をご確認ください</h2>
+      <div class="field" data-k="ask"><label class="lb" for="ask">当日聞いてみたいこと <span class="opt-tag">任意</span></label><p class="note">お金のことで気になっていることがあれば、<br>ひとことどうぞ。<br>内容づくりの参考にします。</p><textarea id="ask" name="ask" placeholder="例：役員報酬の決め方が知りたい"></textarea></div>
+      <div class="field"><span class="lb">入力内容</span><div class="sum" id="sum"></div>
+        <button type="button" class="edit" data-go="1">参加する回を直す</button>　<button type="button" class="edit" data-go="2">お客様情報を直す</button></div>
+      <div class="block" id="agreeBlock">
+        <label class="agree"><input type="checkbox" id="agree"><p><b>個人情報の取り扱いに<br>同意します</b>ご記入いただいた個人情報は、本勉強会の運営およびご連絡のためにのみ使用し、主催者（足柄上商工会）および運営協力者で共同で管理します。ご本人の同意なく、それ以外の目的で使用・第三者へ提供することはありません。</p></label>
+        <div class="err" style="margin-top:6px">同意にチェックを入れてください</div>
+      </div>
+      <div class="alert" id="a3"></div>
+    </section>
+
+    <!-- 完了 -->
+    <section class="step card done" data-step="4" aria-labelledby="s4" tabindex="-1">
+      <div class="big">🎉</div>
+      <h2 id="s4">お申し込み、<br>ありがとうございます</h2>
+      <p class="help" style="margin:0">受け付けました。<br>当日お会いできるのを楽しみにしています。</p>
+      <ul id="doneList"></ul>
+      <div class="next" id="doneNext"></div>
+    </section>
+  </form>
+
+  <p class="foot">FAXでのお申し込みは、<br>チラシ裏面の申込書をご利用ください。<br>FAX 0465-83-3213<br>お問い合わせ：足柄上商工会<br>TEL 0465-83-3211<br><br>主催：足柄上商工会／共催：<span class="nb">東京海上日動火災保険株式会社</span></p>
+</main>
+
+<div class="bar" id="bar">
+  <div class="in"><button type="button" class="prev hide" id="prev">戻る</button><button type="button" class="btn" id="next">次へ</button></div>
+  <p class="memo" id="memo">入力内容は、送信するまで保存されません</p>
+</div>
+
+<script>
+(function(){
+  var API='https://script.google.com/macros/s/AKfycbyopj90DSc9xSbdMT_5hHhXLLMHxBpeuSuPUc2cW9EgDUEQ6GVU55wOzbSxcvQZq5f9OQ/exec';
+  var ROUNDS=[
+    {k:'r1',n:'第1回',s:'12/3',d:'12月3日（木）',t:'社長の財布と、会社の財布',cal:'20261203'},
+    {k:'r2',n:'第2回',s:'12/8',d:'12月8日（火）',t:'社長が倒れた翌日、会社で何が起きるか',cal:'20261208'},
+    {k:'r3',n:'第3回',s:'12/11',d:'12月11日（金）',t:'辞めない会社、揉めない家族',cal:'20261211'}];
+  var f=document.getElementById('f'), step=1, sending=false;
+  var steps=[].slice.call(document.querySelectorAll('.step'));
+  var bar=document.getElementById('steps').children;
+  var next=document.getElementById('next'), prev=document.getElementById('prev');
+  var ref=(new URLSearchParams(location.search).get('ref')||'lp').slice(0,40);
+
+  function val(n){var el=f.elements[n]; if(!el)return ''; if(el.length!==undefined&&el.tagName!=='SELECT'&&!el.type){for(var i=0;i<el.length;i++) if(el[i].checked) return el[i].value; return '';} return (el.value||'').trim();}
+  function radio(n){var r=f.querySelector('input[name="'+n+'"]:checked'); return r?r.value:'';}
+  function esc(s){return String(s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+
+  function show(n){
+    step=n;
+    steps.forEach(function(s){s.classList.toggle('show',+s.dataset.step===n);});
+    for(var i=0;i<3;i++){bar[i].className = i+1<n?'done':(i+1===n?'on':'');}
+    prev.classList.toggle('hide',n===1||n===4);
+    next.textContent = n===3?'この内容で申し込む':'次へ';
+    document.getElementById('bar').classList.toggle('hide',n===4);
+    document.getElementById('steps').classList.toggle('hide',n===4);
+    if(n===3) buildSum();
+    window.scrollTo({top:0,behavior:'smooth'});
+  }
+
+  // 回の選択の見た目
+  f.addEventListener('change',function(e){
+    if(/^r[123]$/.test(e.target.name)){
+      var box=f.querySelector('.round[data-r="'+e.target.name+'"]');
+      box.classList.toggle('picked',e.target.value!=='参加しない');
+      document.getElementById('a1').classList.remove('show');
+    }
+    if(e.target.name==='num'){document.getElementById('compBox').classList.toggle('hide',e.target.value==='1名');}
+    if(e.target.id==='agree'){document.getElementById('agreeBlock').classList.remove('bad');}
+  });
+  f.addEventListener('input',function(e){var fl=e.target.closest('.field'); if(fl) fl.classList.remove('bad');});
+
+  function check1(){
+    var any=ROUNDS.some(function(r){var v=radio(r.k); return v==='会場で参加'||v==='オンラインで参加';});
+    document.getElementById('a1').classList.toggle('show',!any);
+    return any;
+  }
+  function check2(){
+    var first=null;
+    ['biz','name','kana','tel','mail'].forEach(function(k){
+      var v=val(k), bad=!v;
+      if(k==='mail'&&v&&!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v)) bad=true;
+      if(k==='tel'&&v&&v.replace(/[^0-9]/g,'').length<9) bad=true;
+      var fl=f.querySelector('.field[data-k="'+k+'"]'); fl.classList.toggle('bad',bad);
+      if(bad&&!first) first=fl;
+    });
+    if(first){first.scrollIntoView({behavior:'smooth',block:'center'}); var i=first.querySelector('input'); if(i) setTimeout(function(){i.focus({preventScroll:true});},300);}
+    return !first;
+  }
+  function buildSum(){
+    var rows=[];
+    ROUNDS.forEach(function(r){var v=radio(r.k)||'参加しない'; rows.push([r.n+' '+r.s, v==='参加しない'?'<span style="color:#8a909b">参加しない</span>':'<b>'+esc(v)+'</b>']);});
+    rows.push(['事業所名',esc(val('biz'))]);
+    if(val('gyo')) rows.push(['業種',esc(val('gyo'))]);
+    rows.push(['お名前',esc(val('name'))+'（'+esc(val('kana'))+'）']);
+    rows.push(['ご参加人数',esc(radio('num'))+(val('comp')?'<br>'+esc(val('comp')):'')]);
+    rows.push(['電話番号',esc(val('tel'))]);
+    rows.push(['メール',esc(val('mail'))]);
+    document.getElementById('sum').innerHTML='<dl>'+rows.map(function(r){return '<dt>'+r[0]+'</dt><dd>'+r[1]+'</dd>';}).join('')+'</dl>';
+  }
+  [].forEach.call(document.querySelectorAll('.edit'),function(b){b.addEventListener('click',function(){show(+b.dataset.go);});});
+  prev.addEventListener('click',function(){if(step>1) show(step-1);});
+
+  next.addEventListener('click',function(){
+    if(step===1){ if(check1()) show(2); else document.getElementById('a1').scrollIntoView({behavior:'smooth',block:'center'}); return; }
+    if(step===2){ if(check2()) show(3); return; }
+    if(step===3){ submit(); }
+  });
+
+  function submit(){
+    if(sending) return;
+    var a3=document.getElementById('a3'); a3.classList.remove('show');
+    if(!document.getElementById('agree').checked){var ab=document.getElementById('agreeBlock'); ab.classList.add('bad'); ab.scrollIntoView({behavior:'smooth',block:'center'}); return;}
+    var data={r1:radio('r1')||'参加しない',r2:radio('r2')||'参加しない',r3:radio('r3')||'参加しない',
+      biz:val('biz'),gyo:val('gyo'),name:val('name'),kana:val('kana'),num:radio('num')||'1名',comp:radio('num')==='1名'?'':val('comp'),
+      tel:val('tel'),mail:val('mail'),ask:val('ask'),agree:true,ref:ref,website:val('website')};
+    sending=true; next.disabled=true; next.textContent='送信しています…';
+    fetch(API,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(data)})
+      .then(function(r){return r.json();})
+      .then(function(j){ if(j&&j.ok){ done(data); } else { fail(j&&j.error); } })
+      .catch(function(){ fail(); });
+  }
+  function fail(msg){
+    sending=false; next.disabled=false; next.textContent='この内容で申し込む';
+    var a3=document.getElementById('a3');
+    a3.innerHTML=(msg?esc(msg)+'<br>':'送信できませんでした。<br>通信の状態をご確認のうえ、もう一度お試しください。<br>')+'うまくいかない場合は、FAX（0465-83-3213）でもお申し込みいただけます。';
+    a3.classList.add('show'); a3.scrollIntoView({behavior:'smooth',block:'center'});
+  }
+  function calUrl(r,online){
+    var p=new URLSearchParams({action:'TEMPLATE',text:'社長のお金の勉強会 '+r.n+'「'+r.t+'」',dates:r.cal+'T060000Z/'+r.cal+'T073000Z',
+      details:'主催：足柄上商工会\n案内ページ：https://mm738966m-boop.github.io/ashigarakami-seminar/',
+      location: online?'オンライン（Zoom・参加URLはメールでお届けします）':'足柄上商工会 2階（神奈川県足柄上郡松田町松田惣領2083-2）'});
+    return 'https://calendar.google.com/calendar/render?'+p.toString();
+  }
+  function done(d){
+    var html='', anyOnline=false;
+    ROUNDS.forEach(function(r){var v=d[r.k]; if(v==='参加しない') return; var on=v==='オンラインで参加'; if(on) anyOnline=true;
+      html+='<li><b>'+r.n+'　'+r.d+'</b><span class="when">15:00〜16:30</span><span class="when">'+(on?'💻 オンライン':'🏢 会場（足柄上商工会 2階）')+'</span><span>「'+esc(r.t)+'」</span><a class="cal" href="'+calUrl(r,on)+'" target="_blank" rel="noopener">📅 カレンダーに入れる</a></li>';});
+    document.getElementById('doneList').innerHTML=html;
+    document.getElementById('doneNext').innerHTML=(anyOnline?'<b>オンラインで参加される方へ</b><br>参加用のURLは開催前に、<br>ご記入のメールアドレスへ<br>お送りします。<br><span class="mail">'+esc(d.mail)+'</span><br><br>':'')+
+      '見逃した回は、<br>後日録画でご覧いただけます。<br><br>ご不明な点は、足柄上商工会<br>（TEL 0465-83-3211）まで<br>お問い合わせください。<br><br><a href="../">勉強会の案内ページに戻る</a>';
+    show(4);
+    setTimeout(function(){document.querySelector('.done').focus({preventScroll:true});},350);
+  }
+})();
+</script>
+</body>
+</html>
