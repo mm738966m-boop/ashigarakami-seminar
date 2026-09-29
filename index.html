@@ -69,9 +69,29 @@
   .future-list li::before{content:"";position:absolute;left:4px;top:23px;width:14px;height:14px;border-radius:50%;background:var(--gold3);box-shadow:0 0 0 4px rgba(201,161,74,.2)}
 
   /* ---------- 原因 ---------- */
-  .cause-grid{display:grid;grid-template-columns:1fr 330px;gap:40px;align-items:center}
-  .order{width:100%;max-width:330px;margin:0 auto}
-  .order-cap{text-align:center;font-size:15px;color:var(--soft);margin-top:10px}
+  .cause-grid{display:grid;grid-template-columns:1fr 400px;gap:44px;align-items:center}
+  .ofig{margin:0;width:100%;max-width:420px;justify-self:center}
+  .ofig .lbl{display:inline-block;font-size:15px;font-weight:800;letter-spacing:.06em;border-radius:99px;padding:2px 14px;margin-bottom:10px}
+  .ng{background:#f3f3f1;border:1px dashed #b9bcc4;border-radius:16px;padding:16px 18px 18px}
+  .ng .lbl{background:#e2e3e6;color:#5a6070}
+  .ng .flow{display:flex;align-items:center;flex-wrap:wrap;gap:6px 8px;font-size:17px;font-weight:700;color:#5a6070}
+  .ng .flow i{font-style:normal;color:#9aa0ab}
+  .ng .late{display:inline-flex;flex-direction:column;align-items:center;line-height:1.3;color:#8a909b}
+  .ng .late small{font-size:13.5px;color:#b0452f;font-weight:800}
+  .turn{text-align:center;font-size:15px;font-weight:800;color:var(--gold);margin:12px 0}
+  .turn::before{content:"▼";display:block;font-size:18px;line-height:1.1}
+  .ok{background:#fff;border:2px solid var(--gold3);border-radius:16px;padding:16px 18px 18px;box-shadow:0 10px 26px rgba(20,41,74,.10)}
+  .ok .lbl{background:var(--navy);color:var(--gold2)}
+  .step{display:grid;grid-template-columns:54px 1fr;gap:14px;align-items:center;position:relative;padding:10px 0}
+  .step+.step{border-top:1px solid var(--line)}
+  .step .ic{width:54px;height:54px;border-radius:50%;display:grid;place-items:center;background:var(--cream);border:2px solid var(--gold3);position:relative}
+  .step .ic svg{width:30px;height:30px}
+  .step .ic b{position:absolute;top:-6px;left:-6px;width:24px;height:24px;border-radius:50%;background:var(--navy);color:#fff;font-size:14px;line-height:24px;text-align:center;font-weight:800}
+  .step.first .ic{background:var(--navy);border-color:var(--navy)}
+  .step.first .ic b{background:var(--gold3)}
+  .step h4{margin:0;font-family:var(--serif);font-size:21px;color:var(--navy);line-height:1.35}
+  .step p{margin:2px 0 0;font-size:15.5px;color:var(--soft);line-height:1.55}
+  .step .tag{display:inline-block;margin-top:4px;font-size:14px;font-weight:800;color:var(--gold);border:1px solid var(--gold3);border-radius:99px;padding:0 10px;line-height:1.7}
 
   /* ---------- 問題 ---------- */
   .problem{background:var(--wash)}
@@ -150,11 +170,11 @@
 
   @media (max-width:900px){
     .rounds,.gg,.who{grid-template-columns:1fr;max-width:560px;margin-left:auto;margin-right:auto}
+    .cause-grid{grid-template-columns:1fr;gap:30px}
   }
   @media (max-width:760px){
     section{padding:64px 0}
     .scene,.cause-grid{grid-template-columns:1fr;gap:26px}
-    .order{max-width:300px}
     .voices,.rounds,.gg,.who{grid-template-columns:1fr}
     .gal{grid-template-columns:1fr 1fr}
     .lect{grid-template-columns:1fr;padding:26px 20px}
@@ -210,19 +230,27 @@
         <p>もうひとつ、よくあるのは<br><strong>「守る順番」が逆</strong>になっていること。<br>会社を先に守ろうとして、<br>社長ご自身がいちばん後回しになる。</p>
         <p>でも、社長が倒れれば、<br>会社も社員も家族も一緒に揺れます。<br>だから順番は、<strong>社長ご自身から</strong>です。</p>
       </div>
-      <figure class="reveal" style="margin:0">
-        <svg class="order" viewBox="0 0 330 330" role="img" aria-label="守る順番：1 社長自身、2 会社、3 社員と家族">
-          <circle cx="165" cy="165" r="160" fill="#f1f4f9" stroke="#c9a14a" stroke-width="2"/>
-          <circle cx="165" cy="175" r="112" fill="#e3e9f3" stroke="#c9a14a" stroke-width="2"/>
-          <circle cx="165" cy="190" r="62" fill="#14294a"/>
-          <text x="165" y="42" text-anchor="middle" font-size="17" font-weight="800" fill="#a8791f">③</text>
-          <text x="165" y="66" text-anchor="middle" font-size="18" font-weight="800" fill="#14294a">社員と家族</text>
-          <text x="165" y="96" text-anchor="middle" font-size="17" font-weight="800" fill="#a8791f">②</text>
-          <text x="165" y="119" text-anchor="middle" font-size="18" font-weight="800" fill="#14294a">会社</text>
-          <text x="165" y="182" text-anchor="middle" font-size="17" font-weight="800" fill="#e2c27a">①</text>
-          <text x="165" y="207" text-anchor="middle" font-size="19" font-weight="800" fill="#ffffff">社長自身</text>
-        </svg>
-        <figcaption class="order-cap">守る順番は、内側から外側へ</figcaption>
+      <figure class="ofig reveal" aria-label="守る順番の図">
+        <div class="ng">
+          <span class="lbl">よくある順番</span>
+          <div class="flow">会社<i>→</i>社員・家族<i>→</i><span class="late">社長自身<small>いちばん後回し</small></span></div>
+        </div>
+        <div class="turn">順番を入れかえる</div>
+        <div class="ok">
+          <span class="lbl">この勉強会の順番</span>
+          <div class="step first">
+            <div class="ic"><b>1</b><svg viewBox="0 0 24 24" fill="none" stroke="#e2c27a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg></div>
+            <div><h4>まず、社長自身</h4><p>お財布を分けて、<br>自分の老後を守る</p><span class="tag">第1回 12/3（木）</span></div>
+          </div>
+          <div class="step">
+            <div class="ic"><b>2</b><svg viewBox="0 0 24 24" fill="none" stroke="#14294a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V8l7-4 7 4v13"/><path d="M9 21v-5h6v5"/><path d="M9 11h.01M15 11h.01"/></svg></div>
+            <div><h4>次に、会社</h4><p>もしものときも、<br>会社が止まらない</p><span class="tag">第2回 12/8（火）</span></div>
+          </div>
+          <div class="step">
+            <div class="ic"><b>3</b><svg viewBox="0 0 24 24" fill="none" stroke="#14294a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M2.5 20c0-3.3 2.5-5.5 5.5-5.5s5.5 2.2 5.5 5.5"/><path d="M14 15.2c.9-.5 1.9-.7 3-.7 2.5 0 4.5 1.8 4.5 4.5"/></svg></div>
+            <div><h4>そして、社員と家族</h4><p>辞めない会社、<br>揉めない家族</p><span class="tag">第3回 12/11（金）</span></div>
+          </div>
+        </div>
       </figure>
     </div>
   </div>
