@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
 <title>社長のお金の勉強会（全3回）｜足柄上商工会</title>
 <meta name="description" content="社長も守る。会社も、社員も、家族も守る。12/3・12/8・12/11 各15:00〜16:30、足柄上商工会2階＋オンライン。参加無料・1回だけの参加もOK。">
 <meta property="og:type" content="website">
@@ -11,126 +12,160 @@
 <meta property="og:image" content="https://mm738966m-boop.github.io/ashigarakami-seminar/img/ogp.jpg">
 <meta property="og:url" content="https://mm738966m-boop.github.io/ashigarakami-seminar/">
 <meta name="twitter:card" content="summary_large_image">
+<script>document.documentElement.classList.add('js')</script>
 <style>
-  :root{--navy:#122a4c;--navy2:#1d3d6b;--gold:#b98a2e;--gold2:#e6c87a;--cream:#fbf6ea;--ink:#1b2433;--soft:#4b5566;--line:#e3e0d6;--wash:#f3f5f9;
-    --serif:"Hiragino Mincho ProN","Yu Mincho",serif;--gothic:"Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic","Meiryo",sans-serif}
+  :root{--navy:#14294a;--navy2:#1f3c66;--gold:#a8791f;--gold2:#e2c27a;--gold3:#c9a14a;--cream:#fbf6ea;--paper:#fffdf8;--ink:#1b2433;--soft:#3f4a5c;--line:#e6dcc6;--wash:#f1f4f9;
+    --serif:"Hiragino Mincho ProN","Yu Mincho",serif;--gothic:"Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic","Meiryo",sans-serif;
+    --form:"https://docs.google.com/forms/d/e/1FAIpQLSe99slMD53fyTCkarrRc2v5ulQsy5Jihy-S5gI3nDz0np2CSQ/viewform"}
   *{box-sizing:border-box}
-  body{margin:0;background:#fff;color:var(--ink);font-family:var(--gothic);font-size:18px;font-weight:500;line-height:1.85;font-feature-settings:"palt" 1}
+  html{color-scheme:light}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--gothic);font-size:19px;font-weight:500;line-height:1.9;font-feature-settings:"palt" 1}
   img{max-width:100%;display:block}
   a{color:inherit}
-  .wrap{max-width:960px;margin:0 auto;padding:0 22px}
-  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:#06C755;color:#fff;text-decoration:none;font-weight:900;font-size:19.5px;letter-spacing:.02em;border-radius:999px;padding:18px 38px;box-shadow:0 8px 22px rgba(6,199,85,.32);transition:transform .15s,background .15s}
+  .wrap{max-width:900px;margin:0 auto;padding:0 20px}
+  .nb{display:inline-block}
+  .sp-only{display:none}
+
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:#06C755;color:#fff;text-decoration:none;font-weight:900;font-size:19.5px;letter-spacing:.02em;border-radius:999px;padding:18px 40px;box-shadow:0 8px 22px rgba(6,199,85,.32);transition:transform .15s,background .15s}
   .btn:hover{transform:translateY(-2px);background:#05b34c}
   .btn small{font-size:13.5px;font-weight:700;opacity:.95}
   .btn:focus-visible{outline:3px solid var(--navy);outline-offset:3px}
+  .cta{text-align:center;margin-top:34px}
+  .cta .hint{display:block;margin-top:10px;font-size:14.5px;color:var(--soft)}
 
-  /* hero */
+  /* ---------- hero ---------- */
   .hero{position:relative;min-height:min(88vh,760px);display:flex;align-items:flex-end;color:#fff;background:#0b1c34 url('img/hero.jpg') center 30%/cover}
-  .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(9,24,50,.25) 0%,rgba(9,24,50,.55) 45%,rgba(9,24,50,.94) 100%)}
-  .hero .wrap{position:relative;padding-top:90px;padding-bottom:56px;width:100%}
-  .host{position:absolute;top:0;left:0;right:0;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 22px;font-size:14px;font-weight:700;background:rgba(9,24,50,.55);backdrop-filter:blur(6px)}
-  .host .free{background:var(--gold);border-radius:99px;padding:4px 14px;white-space:nowrap}
-  .chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
-  .chips span{border:1.5px solid rgba(255,255,255,.6);border-radius:99px;padding:4px 14px;font-size:15px;font-weight:700;background:rgba(255,255,255,.1)}
-  .hero h1{font-family:var(--serif);font-size:clamp(34px,6.4vw,58px);line-height:1.35;margin:0 0 12px;font-weight:700;text-wrap:balance;text-shadow:0 2px 16px rgba(0,0,0,.35)}
-  .hero h1::before{content:"";display:block;width:64px;height:5px;background:var(--gold2);margin-bottom:18px}
-  .hero .sub{font-size:clamp(20px,3vw,26px);font-weight:800;color:var(--gold2);margin:0 0 6px}
-  .hero .dates{font-size:18px;margin:0 0 26px}
-  .hero .dates b{font-size:22px}
+  .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,24,48,.2) 0%,rgba(10,24,48,.55) 45%,rgba(10,24,48,.95) 100%)}
+  .hero::after{content:"";position:absolute;inset:14px;border:1px solid rgba(226,194,122,.45);pointer-events:none}
+  .hero .wrap{position:relative;padding-top:100px;padding-bottom:56px;width:100%}
+  .host{position:absolute;top:0;left:0;right:0;z-index:2;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 22px;font-size:14.5px;font-weight:700;background:rgba(10,24,48,.7);border-bottom:2px solid var(--gold3)}
+  .host .free{background:linear-gradient(135deg,var(--gold3),var(--gold));border-radius:99px;padding:4px 16px;white-space:nowrap;font-size:16px;letter-spacing:.06em}
+  .kicker{display:inline-block;color:var(--gold2);background:rgba(10,24,48,.8);border:1px solid rgba(226,194,122,.7);border-radius:99px;padding:3px 16px;font-size:16px;font-weight:800;letter-spacing:.08em;margin-bottom:16px}
+  .hero h1{font-family:var(--serif);font-size:clamp(34px,6.4vw,58px);line-height:1.35;margin:0 0 14px;font-weight:700;text-shadow:0 2px 16px rgba(0,0,0,.35)}
+  .hero .sub{font-family:var(--serif);font-size:clamp(22px,3.2vw,28px);font-weight:700;color:var(--gold2);margin:0 0 8px}
+  .hero .dates{font-size:19px;margin:0 0 26px;line-height:1.7}
+  .hero .dates b{font-size:23px}
 
-  section{padding:72px 0}
-  .eyebrow{display:inline-block;font-size:14px;font-weight:800;letter-spacing:.14em;color:var(--gold);margin-bottom:6px}
-  h2{font-family:var(--serif);font-size:clamp(23px,6.5vw,28px);line-height:1.45;margin:0 0 18px;color:var(--navy);text-wrap:balance}
-  .lead{max-width:40em;color:var(--soft)}
+  /* ---------- common ---------- */
+  section{padding:80px 0}
+  .eyebrow{display:block;font-size:15px;font-weight:800;letter-spacing:.14em;color:var(--gold);margin-bottom:8px}
+  h2{font-family:var(--serif);font-size:clamp(23px,6.5vw,28px);line-height:1.55;margin:0 0 22px;color:var(--navy)}
+  h2::after{content:"";display:block;width:48px;height:3px;background:var(--gold3);margin-top:16px}
+  .center{text-align:center}
+  .center h2::after{margin-left:auto;margin-right:auto}
+  .prose p{margin:0 0 1.1em}
+  .prose p:last-child{margin-bottom:0}
+  .prose strong{color:var(--navy);background:linear-gradient(transparent 62%,rgba(226,194,122,.45) 62%)}
 
-  /* worry */
-  .worry{background:var(--cream)}
-  .bubbles{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px;margin-top:22px}
-  .bubbles div{background:#fff;border-radius:18px;padding:18px 20px;box-shadow:0 4px 18px rgba(0,0,0,.06);position:relative;font-weight:700}
-  .bubbles div::before{content:"💭";margin-right:6px}
-  .bridge{margin-top:26px;font-family:var(--serif);font-size:22px;color:var(--navy);font-weight:700}
+  /* ---------- 未来 ---------- */
+  .future{background:var(--cream)}
+  .scene{display:grid;grid-template-columns:1.1fr 1fr;gap:34px;align-items:center}
+  .scene img{border-radius:18px;aspect-ratio:4/3;object-fit:cover;width:100%;box-shadow:0 12px 30px rgba(20,41,74,.16)}
+  .scene .quote{font-family:var(--serif);font-size:clamp(22px,4.2vw,27px);color:var(--navy);line-height:1.65;font-weight:700;margin:0 0 20px}
+  .scene .quote::before{content:"“";display:block;font-size:56px;line-height:.6;color:var(--gold3);margin-bottom:8px}
+  .future-list{list-style:none;padding:0;margin:0}
+  .future-list li{position:relative;padding:12px 0 12px 34px;border-top:1px solid var(--line)}
+  .future-list li:last-child{border-bottom:1px solid var(--line)}
+  .future-list li::before{content:"";position:absolute;left:4px;top:23px;width:14px;height:14px;border-radius:50%;background:var(--gold3);box-shadow:0 0 0 4px rgba(201,161,74,.2)}
 
-  /* rounds */
-  .rounds{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:26px}
-  .r{border-radius:20px;overflow:hidden;background:#fff;box-shadow:0 10px 30px rgba(18,42,76,.12);display:flex;flex-direction:column}
-  .r .ph{position:relative;aspect-ratio:4/3;background-size:cover;background-position:center}
-  .r .ph .d{position:absolute;left:14px;top:14px;background:var(--navy);color:#fff;border-radius:14px;padding:8px 14px;line-height:1.25;text-align:center}
-  .r .ph .d .n{font-size:13px;font-weight:800;color:var(--gold2);letter-spacing:.1em}
-  .r .ph .d .dt{font-size:26px;font-weight:800}
-  .r .ph .d .dt small{font-size:14px}
-  .r .body{padding:18px 20px 22px;flex:1}
-  .r .tm{font-size:15px;font-weight:800;color:var(--gold)}
-  .r h3{font-family:var(--serif);font-size:22px;line-height:1.45;margin:4px 0 10px;color:var(--navy)}
-  .r ul{margin:0;padding-left:20px;font-size:16px;color:var(--soft)}
+  /* ---------- 原因 ---------- */
+  .cause-grid{display:grid;grid-template-columns:1fr 330px;gap:40px;align-items:center}
+  .order{width:100%;max-width:330px;margin:0 auto}
+  .order-cap{text-align:center;font-size:15px;color:var(--soft);margin-top:10px}
+
+  /* ---------- 問題 ---------- */
+  .problem{background:var(--wash)}
+  .voices{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:8px}
+  .voices div{background:#fff;border-radius:16px;padding:18px 22px;box-shadow:0 4px 16px rgba(20,41,74,.06);font-weight:700;color:var(--navy);line-height:1.7;border-left:4px solid var(--gold3)}
+  .bridge{margin-top:30px;font-family:var(--serif);font-size:clamp(20px,4vw,23px);color:var(--navy);font-weight:700;text-align:center;line-height:1.7}
+
+  /* ---------- 解決：3回 ---------- */
+  .rounds{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
+  .r{border-radius:18px;overflow:hidden;background:#fff;box-shadow:0 10px 30px rgba(20,41,74,.12);display:flex;flex-direction:column;border:1px solid var(--line)}
+  .r .ph{position:relative;aspect-ratio:16/10;background-size:cover;background-position:center}
+  .r .ph .d{position:absolute;left:12px;top:12px;background:var(--navy);color:#fff;border-radius:12px;padding:8px 14px;line-height:1.25;text-align:center;border:1px solid var(--gold3)}
+  .r .ph .d .n{font-family:var(--serif);font-size:14px;font-weight:700;color:var(--gold2);letter-spacing:.12em}
+  .r .ph .d .dt{font-size:27px;font-weight:800}
+  .r .ph .d .dt small{font-size:15px}
+  .r .body{padding:18px 20px 22px;flex:1;display:flex;flex-direction:column}
+  .r .tm{font-size:15px;font-weight:800;color:var(--gold);letter-spacing:.04em}
+  .r h3{font-family:var(--serif);font-size:22px;line-height:1.5;margin:4px 0 12px;color:var(--navy)}
+  .r ul{margin:0 0 14px;padding-left:1.2em;font-size:17px;color:var(--soft);line-height:1.7}
   .r li{margin:4px 0}
-  .r .num{margin-top:12px;background:var(--cream);border-radius:12px;padding:10px 14px;font-size:15px}
-  .r .num b{display:block;color:var(--gold);font-size:13px;letter-spacing:.08em}
-  .pick{margin-top:22px;text-align:center;font-weight:800;color:var(--navy);font-size:20px}
+  .r .num{margin-top:auto;background:var(--cream);border-radius:12px;padding:12px 14px;font-size:16.5px;font-weight:700;color:var(--navy);line-height:1.6}
+  .r .num b{display:block;color:var(--gold);font-size:14px;letter-spacing:.08em}
+  .pick{margin-top:26px;text-align:center;font-weight:800;color:var(--navy);font-size:20px}
 
-  /* gifts */
-  .gifts{background:linear-gradient(180deg,#fff, var(--wash))}
-  .gg{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px}
-  .g{background:#fff;border:1.5px solid var(--line);border-radius:18px;padding:22px 20px;text-align:center}
+  .gifts{background:linear-gradient(180deg,var(--paper),var(--wash))}
+  .gg{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:10px}
+  .g{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px 20px;text-align:center}
   .g .ic{font-size:40px;line-height:1}
-  .g h3{font-size:19px;color:var(--navy);margin:10px 0 6px}
-  .g p{margin:0;font-size:16px;color:var(--soft)}
+  .g h3{font-size:20px;color:var(--navy);margin:12px 0 6px}
+  .g p{margin:0;font-size:17px;color:var(--soft);line-height:1.75}
 
-  /* gallery */
-  .gal{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:22px}
+  .gal{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:10px}
   .gal img{border-radius:14px;aspect-ratio:4/3;object-fit:cover;width:100%}
 
-  /* for whom */
-  .who{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:20px}
-  .who div{background:var(--wash);border-radius:14px;padding:16px 18px;font-weight:700}
-  .who div::before{content:"✔";color:var(--gold);margin-right:8px;font-weight:800}
+  .who{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:10px}
+  .who div{position:relative;background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px 18px 16px 46px;font-weight:700;color:var(--navy);line-height:1.7}
+  .who div::before{content:"✔";position:absolute;left:18px;top:16px;color:var(--gold);font-weight:800}
 
-  /* lecturer */
-  .lect{display:grid;grid-template-columns:180px 1fr;gap:28px;align-items:center;background:var(--cream);border-radius:22px;padding:28px}
-  .lect img{width:180px;height:180px;border-radius:50%;object-fit:cover;border:6px solid #fff;box-shadow:0 8px 24px rgba(0,0,0,.12)}
-  .lect .nm{font-family:var(--serif);font-size:28px;font-weight:700;color:var(--navy)}
-  .lect .nm small{font-family:var(--gothic);font-size:15px;color:var(--gold);margin-left:10px}
-  .lect p{margin:8px 0 0;color:var(--soft)}
+  .lect{display:grid;grid-template-columns:190px 1fr;gap:30px;align-items:start;background:var(--cream);border-radius:22px;padding:32px;border:1px solid var(--line)}
+  .lect img{width:190px;height:190px;border-radius:50%;object-fit:cover;border:6px solid #fff;box-shadow:0 8px 24px rgba(0,0,0,.12)}
+  .lect .nm{font-family:var(--serif);font-size:30px;font-weight:700;color:var(--navy);line-height:1.3}
+  .lect .nm small{font-family:var(--gothic);font-size:15px;color:var(--gold);margin-left:10px;font-weight:800}
+  .lect .kana{font-size:14px;color:var(--soft);letter-spacing:.1em}
+  .lect .prof{margin:10px 0 0;color:var(--soft);font-size:17px;line-height:1.8}
+  .lect .msg{margin-top:18px;background:#fff;border-radius:14px;padding:18px 20px;font-size:17.5px;line-height:1.85;border-left:4px solid var(--gold3)}
+  .lect .msg b{display:block;font-family:var(--serif);color:var(--navy);font-size:18px;margin-bottom:4px}
 
-  /* outline */
-  table{width:100%;border-collapse:collapse;margin-top:18px;font-size:17px}
-  th,td{border-bottom:1px solid var(--line);padding:14px 10px;text-align:left;vertical-align:top}
+  table{width:100%;border-collapse:collapse;margin-top:8px;font-size:18px}
+  th,td{border-bottom:1px solid var(--line);padding:15px 10px;text-align:left;vertical-align:top}
   th{width:8em;color:var(--navy);white-space:nowrap}
   .map{margin-top:18px;border-radius:16px;overflow:hidden;border:1px solid var(--line)}
   .map iframe{width:100%;height:320px;border:0;display:block}
 
-  /* faq */
-  details{border-bottom:1px solid var(--line);padding:16px 4px}
-  summary{font-weight:800;color:var(--navy);cursor:pointer;list-style:none}
+  details{border-bottom:1px solid var(--line);padding:18px 4px}
+  summary{font-weight:800;color:var(--navy);cursor:pointer;list-style:none;padding-left:2em;text-indent:-2em}
+  summary::-webkit-details-marker{display:none}
   summary::before{content:"Q. ";color:var(--gold)}
   details p{margin:10px 0 0;color:var(--soft)}
 
-  .final{background:var(--navy);color:#fff;text-align:center}
+  .final{background:var(--navy) url('img/g3.jpg') center/cover;position:relative;color:#fff;text-align:center}
+  .final::before{content:"";position:absolute;inset:0;background:rgba(10,24,48,.9)}
+  .final .wrap{position:relative}
   .final h2{color:#fff}
-  .final p{color:#d8e0ee}
-  .final .note{font-size:15px;margin-top:18px}
+  .final h2::after{margin-left:auto;margin-right:auto}
+  .final p{color:#e3e9f3}
+  .final .note{font-size:15px;margin-top:20px;line-height:1.8}
 
-  footer{text-align:center;font-size:14px;color:var(--soft);padding:26px 0 110px}
+  footer{text-align:center;font-size:14px;color:var(--soft);padding:26px 0 120px}
 
-  .sticky{position:fixed;left:0;right:0;bottom:0;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);box-shadow:0 -4px 20px rgba(0,0,0,.1);padding:12px 16px;display:flex;justify-content:center;z-index:10}
+  .sticky{position:fixed;left:0;right:0;bottom:0;background:rgba(255,253,248,.96);backdrop-filter:blur(8px);box-shadow:0 -4px 20px rgba(0,0,0,.1);padding:12px 16px;display:flex;justify-content:center;z-index:10}
   .sticky .btn{width:100%;max-width:520px;padding:14px 20px;font-size:19.5px}
 
-  .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
-  .reveal.on{opacity:1;transform:none}
-  @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.btn{transition:none}}
+  .js .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+  .js .reveal.on{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){.js .reveal{opacity:1;transform:none;transition:none}.btn{transition:none}}
 
+  @media (max-width:900px){
+    .rounds,.gg,.who{grid-template-columns:1fr;max-width:560px;margin-left:auto;margin-right:auto}
+  }
   @media (max-width:760px){
-    body{font-size:18px}
-    .rounds,.gg,.who{grid-template-columns:1fr}
+    section{padding:64px 0}
+    .scene,.cause-grid{grid-template-columns:1fr;gap:26px}
+    .order{max-width:300px}
+    .voices,.rounds,.gg,.who{grid-template-columns:1fr}
     .gal{grid-template-columns:1fr 1fr}
-    .lect{grid-template-columns:1fr;text-align:center}
+    .lect{grid-template-columns:1fr;padding:26px 20px}
+    .lect .top{text-align:center}
     .lect img{margin:0 auto}
     .hero{min-height:min(92vh,720px)}
-    .host{font-size:13px}
+    .hero h1{font-size:clamp(30px,8.4vw,40px)}
+    .host{font-size:13.5px;align-items:flex-start;line-height:1.5}
+    th{width:5.6em;padding-right:4px}
+    .sp-only{display:inline}.pc-only{display:none}
   }
-
-  .nb{display:inline-block}
-  .sp-only{display:none}
-  @media (max-width:760px){th{width:5.6em;padding-right:4px}.sp-only{display:inline}.pc-only{display:none}.host{align-items:flex-start;line-height:1.5}.hero h1{font-size:clamp(30px,8.4vw,40px)}}
 </style>
 </head>
 <body>
@@ -138,7 +173,7 @@
 <header class="hero">
   <div class="host"><span>主催：足柄上商工会<span class="pc-only">／</span><br class="sp-only">共催：東京海上日動火災保険</span><span class="free">参加無料</span></div>
   <div class="wrap">
-    <div class="chips"><span>全3回</span><span>1回だけでもOK</span><span>ご自宅からオンラインOK</span></div>
+    <span class="kicker">12月・全3回／1回だけでもOK</span>
     <h1>社長も守る。<br><span class="nb">会社も、社員も、</span><span class="nb">家族も守る。</span></h1>
     <p class="sub">社長のお金の勉強会</p>
     <p class="dates"><b><span class="nb">12/3（木）・</span><span class="nb">12/8（火）・</span><span class="nb">12/11（金）</span></b><br><span class="nb">各回 15:00〜16:30／</span><span class="nb">足柄上商工会 2階＋オンライン</span></p>
@@ -146,54 +181,106 @@
   </div>
 </header>
 
-<section class="worry">
+<!-- 未来 -->
+<section class="future">
   <div class="wrap">
-    <span class="eyebrow reveal">こんなこと、ありませんか？</span>
-    <h2 class="reveal">会社のお金は毎日見ているのに、<br>自分のお金は、つい後回し。</h2>
-    <div class="bubbles">
-      <div class="reveal">社長個人のお金と会社のお金が、なんとなく混ざっている</div>
-      <div class="reveal">自分に万一があったら会社と家族がどうなるか、考えたことがない</div>
-      <div class="reveal">引き継ぎのことは、「そのうち」になっている</div>
+    <span class="eyebrow reveal">3回を終えた、12月の終わりに</span>
+    <div class="scene">
+      <div class="reveal">
+        <p class="quote">通帳を閉じて、<br>「来年も、これで大丈夫だ」<br>と言える年末。</p>
+        <ul class="future-list">
+          <li>社長と会社のお財布が、<br>きちんと分かれている</li>
+          <li>もしものとき、家族が<br>何から手をつけるか知っている</li>
+          <li>社員に「来年もよろしく」と、<br>迷わず言える</li>
+        </ul>
+      </div>
+      <img class="reveal" src="img/g4.jpg" alt="家族連れも参加したお金の勉強会の集合写真" loading="lazy">
     </div>
-    <p class="bridge reveal">順番は、まず社長自身から。<br>3回かけて、ひとつずつ整えていきましょう。</p>
   </div>
 </section>
 
+<!-- 原因 -->
 <section>
   <div class="wrap">
-    <span class="eyebrow reveal">全3回のテーマ</span>
-    <h2 class="reveal">守る範囲を、<br>少しずつ広げていく3回</h2>
-    <p class="lead reveal">むずかしい言葉は使いません。<br>各回90分、どの回からでも参加できます。</p>
+    <div class="cause-grid">
+      <div class="prose reveal">
+        <h2>会社のお金は、毎日見ている。<br>社長のお金は、<span class="nb">誰と見ていますか。</span></h2>
+        <p>税理士さんが見るのは、会社の決算。<br>銀行が見るのは、返済の見通し。</p>
+        <p>社長個人のお金。<br>もしものときの段取り。<br>家族のこれから。</p><p>この3つを1本の線でつないで見る人は、<br>意外といません。</p>
+        <p>もうひとつ、よくあるのは<br><strong>「守る順番」が逆</strong>になっていること。<br>会社を先に守ろうとして、<br>社長ご自身がいちばん後回しになる。</p>
+        <p>でも、社長が倒れれば、<br>会社も社員も家族も一緒に揺れます。<br>だから順番は、<strong>社長ご自身から</strong>です。</p>
+      </div>
+      <figure class="reveal" style="margin:0">
+        <svg class="order" viewBox="0 0 330 330" role="img" aria-label="守る順番：1 社長自身、2 会社、3 社員と家族">
+          <circle cx="165" cy="165" r="160" fill="#f1f4f9" stroke="#c9a14a" stroke-width="2"/>
+          <circle cx="165" cy="175" r="112" fill="#e3e9f3" stroke="#c9a14a" stroke-width="2"/>
+          <circle cx="165" cy="190" r="62" fill="#14294a"/>
+          <text x="165" y="42" text-anchor="middle" font-size="17" font-weight="800" fill="#a8791f">③</text>
+          <text x="165" y="66" text-anchor="middle" font-size="18" font-weight="800" fill="#14294a">社員と家族</text>
+          <text x="165" y="96" text-anchor="middle" font-size="17" font-weight="800" fill="#a8791f">②</text>
+          <text x="165" y="119" text-anchor="middle" font-size="18" font-weight="800" fill="#14294a">会社</text>
+          <text x="165" y="182" text-anchor="middle" font-size="17" font-weight="800" fill="#e2c27a">①</text>
+          <text x="165" y="207" text-anchor="middle" font-size="19" font-weight="800" fill="#ffffff">社長自身</text>
+        </svg>
+        <figcaption class="order-cap">守る順番は、内側から外側へ</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- 問題 -->
+<section class="problem">
+  <div class="wrap">
+    <h2 class="reveal">勉強会でよく聞くのは、<br><span class="nb">こんなお話です。</span></h2>
+    <div class="voices">
+      <div class="reveal">「役員報酬は、去年と同じでいいか」<br>と、毎年なんとなく決めている</div>
+      <div class="reveal">会社の口座から、<br>個人の支払いをすることがある</div>
+      <div class="reveal">借入の一覧や通帳の場所を、<br>家族には伝えていない</div>
+      <div class="reveal">「引き継ぎは、そのうち」が、<br>もう何年も続いている</div>
+    </div>
+    <p class="bridge reveal">どれも、今日すぐに<br>困ることではありません。<br>だからこそ、後回しになりやすいのです。</p>
+  </div>
+</section>
+
+<!-- 解決 -->
+<section>
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow reveal">全3回の勉強会</span>
+      <h2 class="reveal">内側から順番に、<br>3回で整えていきます。</h2>
+      <p class="reveal" style="margin:0">1回90分。<br>むずかしい言葉は使いません。<br>毎回、ご自分の数字を<br>1つ持ち帰っていただきます。</p>
+    </div>
     <div class="rounds">
       <article class="r reveal">
         <div class="ph" style="background-image:url('img/r1.jpg')"><div class="d"><div class="n">第1回</div><div class="dt">12/3<small>（木）</small></div></div></div>
         <div class="body">
-          <div class="tm">社長自身を整える</div>
+          <div class="tm">① 社長自身を整える</div>
           <h3>社長の財布と、<br>会社の財布</h3>
-          <ul><li>混ざると何が起きる？</li><li>社長の老後は、誰が守る？</li><li>10分で分かる「守りの順番」</li></ul>
-          <div class="num"><b>持ち帰る数字</b>手元資金は、何か月分ある？</div>
+          <ul><li>混ざると、何が起きる？</li><li>社長の老後は、誰が守る？</li><li>10分で分かる「守りの順番」</li></ul>
+          <div class="num"><b>持ち帰る数字</b>手元のお金は、<br>何か月分ある？</div>
         </div>
       </article>
       <article class="r reveal">
         <div class="ph" style="background-image:url('img/r2.jpg')"><div class="d"><div class="n">第2回</div><div class="dt">12/8<small>（火）</small></div></div></div>
         <div class="body">
-          <div class="tm">会社を守る</div>
+          <div class="tm">② 会社を守る</div>
           <h3>社長が倒れた翌日、<br>会社で何が起きるか</h3>
-          <ul><li>借入・保証・売上、家族に来る電話</li><li>借入と備えは、セットで考える</li><li>事業を引き継ぐ「入口」の考え方</li></ul>
-          <div class="num"><b>持ち帰る数字</b>万一のとき、会社と家族に足りない額は？</div>
+          <ul><li>借入・保証・売上と、<br>家族にかかってくる電話</li><li>借入と備えは、セットで考える</li><li>事業を引き継ぐ「入口」</li></ul>
+          <div class="num"><b>持ち帰る数字</b>もしものとき、<br>会社と家族に足りない額は？</div>
         </div>
       </article>
       <article class="r reveal">
         <div class="ph" style="background-image:url('img/r3.jpg')"><div class="d"><div class="n">第3回</div><div class="dt">12/11<small>（金）</small></div></div></div>
         <div class="body">
-          <div class="tm">社員と家族を守る</div>
+          <div class="tm">③ 社員と家族を守る</div>
           <h3>辞めない会社、<br>揉めない家族</h3>
-          <ul><li>家族・社員に引き継いだ後の実例</li><li>社員が辞めない、お金の仕組み</li><li>家族に「残すもの」と「伝えるもの」</li></ul>
-          <div class="num"><b>持ち帰る数字</b>引退までに必要な額と、今の差は？</div>
+          <ul><li>家族や社員に<br>引き継いだ後の実例</li><li>社員が辞めない、<br>お金の仕組み</li><li>家族に「残すもの」と<br>「伝えるもの」</li></ul>
+          <div class="num"><b>持ち帰る数字</b>引退までに必要な額と、<br>今の差は？</div>
         </div>
       </article>
     </div>
-    <p class="pick reveal">気になるテーマの回だけでも、どうぞ。</p>
+    <p class="pick reveal">気になるテーマの回だけでも、<br class="sp-only">どうぞ。</p>
+    <div class="cta reveal"><a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSe99slMD53fyTCkarrRc2v5ulQsy5Jihy-S5gI3nDz0np2CSQ/viewform" target="_blank" rel="noopener">参加する回を選ぶ <small>1分で完了</small></a><span class="hint">回ごとに「会場」か「オンライン」を選べます</span></div>
   </div>
 </section>
 
@@ -202,8 +289,8 @@
     <span class="eyebrow reveal">参加すると</span>
     <h2 class="reveal">聞いて終わり、にしない<br>3つのおみやげ</h2>
     <div class="gg">
-      <div class="g reveal"><div class="ic">🔢</div><h3>自分の「お金の数字」</h3><p>各回、ご自分の数字を1つ持ち帰れます。</p></div>
-      <div class="g reveal"><div class="ic">🧮</div><h3>個別に30分で計算</h3><p>計算が気になる方は、一緒に計算します。<br>ご希望の方だけで大丈夫です。</p></div>
+      <div class="g reveal"><div class="ic">🔢</div><h3>自分の「お金の数字」</h3><p>各回、ご自分の数字を<br>1つ持ち帰れます。</p></div>
+      <div class="g reveal"><div class="ic">🧮</div><h3>個別に30分で計算</h3><p>計算が気になる方は、<br>一緒に計算します。<br>ご希望の方だけで大丈夫です。</p></div>
       <div class="g reveal"><div class="ic">📋</div><h3>全体設計シート</h3><p>3回ご参加の方には、<br><span class="nb">「社長のお金の全体設計シート」</span>を<br>個別にお作りします。</p></div>
     </div>
   </div>
@@ -213,12 +300,12 @@
   <div class="wrap">
     <span class="eyebrow reveal">勉強会の様子</span>
     <h2 class="reveal">和やかに、<br>声を出しながら学ぶ場です</h2>
-    <p class="lead reveal">講義を聞くだけでなく、隣の方と話したり、質問したり。<br>はじめての方も、すぐになじめます。</p>
+    <p class="reveal" style="margin:0;color:var(--soft)">講義を聞くだけでなく、隣の方と話したり、質問したり。<br>はじめての方も、すぐになじめます。</p>
     <div class="gal">
       <img class="reveal" src="img/g2.jpg" alt="参加者が発言している様子" loading="lazy">
       <img class="reveal" src="img/g3.jpg" alt="会場で講義を受ける様子" loading="lazy">
       <img class="reveal" src="img/g1.jpg" alt="参加者の集合写真" loading="lazy">
-      <img class="reveal" src="img/g4.jpg" alt="家族連れも参加した集合写真" loading="lazy">
+      <img class="reveal" src="img/r2.jpg" alt="少人数で話し合う様子" loading="lazy">
     </div>
   </div>
 </section>
@@ -228,9 +315,9 @@
     <span class="eyebrow reveal">こんな方におすすめ</span>
     <h2 class="reveal">業種・規模は問いません</h2>
     <div class="who">
-      <div class="reveal">経営者・個人事業主・一人親方の方</div>
-      <div class="reveal">後継ぎの方・ご家族・従業員の方</div>
-      <div class="reveal">お金のことを一度整理したい方</div>
+      <div class="reveal">経営者・個人事業主・<br>一人親方の方</div>
+      <div class="reveal">後継ぎの方・ご家族・<br>従業員の方</div>
+      <div class="reveal">お金のことを<br class="pc-only">一度整理したい方</div>
     </div>
   </div>
 </section>
@@ -238,10 +325,12 @@
 <section style="padding-top:0">
   <div class="wrap">
     <div class="lect reveal">
-      <img src="img/lecturer.jpg" alt="講師 森川満章">
+      <div class="top"><img src="img/lecturer.jpg" alt="講師 森川満章"></div>
       <div>
+        <div class="kana">もりかわ みちあき</div>
         <div class="nm">森川 満章<small>講師</small></div>
-        <p>fulfull株式会社 代表取締役。<br>商工会議所の<span class="nb">ビジネスお助け隊</span>・<span class="nb">創業塾</span>の役員として、<br><span class="nb">地域の創業・経営支援</span>にも携わる。<br>むずかしい言葉を使わない<br><span class="nb">「お金の勉強会」</span>を<br>各地で開いています。</p>
+        <p class="prof">fulfull株式会社 代表取締役。<br>1986年 岩手県出身・横浜在住。<br>30歳まで投資を知らなかった、<br>元ヤマト運輸のドライバー。<br>いまは相談2,000件のお金のプロ。<br>商工会議所のビジネスお助け隊・<br>創業塾の役員も務めています。</p>
+        <div class="msg"><b>講師から、ひとこと</b>お金の話は、<br>むずかしい言葉が出たとたんに、<br>他人ごとになってしまいます。<br>だから僕の勉強会では、<br>専門用語はなるべく使いません。<br>その場で、ご自分の数字を<br>1つ出して持ち帰っていただく。<br>そこから、年明けの一歩が<br>決まると思っています。</div>
       </div>
     </div>
   </div>
@@ -253,9 +342,9 @@
     <h2 class="reveal">日時・会場</h2>
     <table class="reveal">
       <tr><th>日程</th><td>第1回 12月3日（木）<br>第2回 12月8日（火）<br>第3回 12月11日（金）<br>各回 15:00〜16:30</td></tr>
-      <tr><th>会場</th><td>足柄上商工会 2階<br>神奈川県足柄上郡松田町松田惣領2083-2</td></tr>
+      <tr><th>会場</th><td>足柄上商工会 2階<br>神奈川県足柄上郡<br>松田町松田惣領2083-2</td></tr>
       <tr><th>オンライン</th><td><span class="nb">ご自宅から</span><span class="nb">Zoomで参加できます。</span><br><span class="nb">参加用URLは</span><span class="nb">メールでお送りします。</span></td></tr>
-      <tr><th>見逃し</th><td>見逃した回は、後日録画でご覧いただけます</td></tr>
+      <tr><th>見逃し</th><td>見逃した回は、<br>後日、録画で見られます</td></tr>
       <tr><th>参加費</th><td>無料</td></tr>
       <tr><th>お申し込み</th><td>各回の直前まで受付中</td></tr>
       <tr><th>主催・共催</th><td>主催：足柄上商工会<br>共催：<span class="nb">東京海上日動</span><span class="nb">火災保険株式会社</span></td></tr>
@@ -269,23 +358,24 @@
   <div class="wrap">
     <span class="eyebrow reveal">よくあるご質問</span>
     <h2 class="reveal">はじめての方へ</h2>
+    <details class="reveal"><summary>知識ゼロでも大丈夫ですか？</summary><p>大丈夫です。<br>専門用語はなるべく使いません。<br>ご自分の数字を<br>一緒に出していきます。</p></details>
     <details class="reveal"><summary>1回だけの参加でも大丈夫ですか？</summary><p>もちろんです。<br>各回で話が完結するように作っています。<br>気になるテーマの回だけでもどうぞ。</p></details>
-    <details class="reveal"><summary>オンラインはどうやって参加しますか？</summary><p>お申し込みで「オンライン」を選ぶと、<br>参加用のURLをメールでお送りします。<br>当日はURLを押すだけで入れます。</p></details>
+    <details class="reveal"><summary>オンラインの参加方法は？</summary><p>お申し込みで「オンライン」を選ぶと、<br>参加用のURLをメールでお送りします。<br>当日はURLを押すだけで入れます。</p></details>
     <details class="reveal"><summary>家族や従業員も参加できますか？</summary><p>ぜひご一緒にどうぞ。<br>後継ぎの方、ご家族、<br>従業員の方も参加できます。<br>申込フォームで人数をお知らせください。</p></details>
-    <details class="reveal"><summary>個別に相談もできますか？</summary><p>はい、できます。<br>勉強会のあと、ご希望の方には<br>30分ほど、ご自分の数字を<br>一緒に計算します。<br>フォームの「当日聞いてみたいこと」に<br>書いていただければ、準備しておきます。</p></details>
+    <details class="reveal"><summary>個別に相談もできますか？</summary><p>はい、できます。<br>勉強会のあと、ご希望の方には<br>30分ほど、ご自分の数字を<br>一緒に計算します。</p></details>
   </div>
 </section>
 
 <section class="final">
   <div class="wrap">
-    <h2 class="reveal">まずは気になる回から、<br>一緒に整えてみませんか。</h2>
-    <p class="reveal">お申し込みは1分で終わります。</p>
-    <a class="btn reveal" href="https://docs.google.com/forms/d/e/1FAIpQLSe99slMD53fyTCkarrRc2v5ulQsy5Jihy-S5gI3nDz0np2CSQ/viewform" target="_blank" rel="noopener">無料で申し込む <small>1分で完了</small></a>
-    <p class="note">FAXでのお申し込みは、<br>チラシ裏面の申込書をご利用ください。<br>FAX 0465-83-3213</p>
+    <h2 class="reveal">来年の手帳を開く前に、<br><span class="nb">90分だけ、</span><span class="nb">ご自分のお金のために。</span></h2>
+    <p class="reveal">まずは、気になる回を1つ選んでください。<br>お申し込みは1分で終わります。</p>
+    <div class="cta reveal" style="margin-top:26px"><a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSe99slMD53fyTCkarrRc2v5ulQsy5Jihy-S5gI3nDz0np2CSQ/viewform" target="_blank" rel="noopener">無料で申し込む <small>1分で完了</small></a></div>
+    <p class="note reveal">FAXでのお申し込みは、<br>チラシ裏面の申込書をご利用ください。<br>FAX 0465-83-3213</p>
   </div>
 </section>
 
-<footer>主催：足柄上商工会／共催：東京海上日動火災保険株式会社</footer>
+<footer>主催：足柄上商工会／<br class="sp-only">共催：東京海上日動火災保険株式会社</footer>
 
 <div class="sticky"><a class="btn stk" href="https://docs.google.com/forms/d/e/1FAIpQLSe99slMD53fyTCkarrRc2v5ulQsy5Jihy-S5gI3nDz0np2CSQ/viewform" target="_blank" rel="noopener">無料で申し込む<small class="pc-only">12/3・12/8・12/11</small></a></div>
 
