@@ -100,7 +100,7 @@
   .bridge{margin-top:30px;font-family:var(--serif);font-size:clamp(20px,4vw,23px);color:var(--navy);font-weight:700;text-align:center;line-height:1.7}
 
   /* ---------- 解決：3回 ---------- */
-  .rounds{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
+  .rounds{display:grid;grid-template-columns:1fr;gap:22px;margin:30px auto 0;max-width:860px}
   .r{border-radius:18px;overflow:hidden;background:#fff;box-shadow:0 10px 30px rgba(20,41,74,.12);display:flex;flex-direction:column;border:1px solid var(--line)}
   .r .ph{position:relative;aspect-ratio:16/10;background-size:cover;background-position:center}
   .r .ph .d{position:absolute;left:12px;top:12px;background:var(--navy);color:#fff;border-radius:12px;padding:8px 14px;line-height:1.25;text-align:center;border:1px solid var(--gold3)}
@@ -115,6 +115,22 @@
   .r .num{margin-top:auto;background:var(--cream);border-radius:12px;padding:12px 14px;font-size:16.5px;font-weight:700;color:var(--navy);line-height:1.6}
   .r .num b{display:block;color:var(--gold);font-size:14px;letter-spacing:.08em}
   .pick{margin-top:26px;text-align:center;font-weight:800;color:var(--navy);font-size:20px}
+  .r .gain{background:#f4f8f5;border:1px solid #cfe6d6;border-radius:12px;padding:14px 16px;margin-bottom:12px}
+  .r .gain .hd{display:inline-block;background:#06C755;color:#fff;font-size:14.5px;font-weight:800;border-radius:99px;padding:1px 12px;letter-spacing:.06em}
+  .r .gain ul{list-style:none;margin:8px 0 0;padding:0;color:var(--ink);font-size:17px;line-height:1.6}
+  .r .gain li{position:relative;padding-left:30px;margin:8px 0}
+  .r .gain li::before{content:"✓";position:absolute;left:0;top:2px;width:21px;height:21px;border-radius:50%;background:#06C755;color:#fff;font-size:13.5px;font-weight:900;line-height:21px;text-align:center}
+  .r .gain em{font-style:normal;font-weight:800;color:var(--navy);background:linear-gradient(transparent 62%,rgba(226,194,122,.5) 62%)}
+  .r .talk{margin:12px 0 0;font-size:14.5px;color:var(--soft);line-height:1.7}
+  .r .talk span{display:block;font-weight:800;color:var(--gold);font-size:14px}
+  .set{margin:30px auto 0;max-width:860px;background:var(--navy);color:#fff;border-radius:20px;padding:26px 24px;border:1px solid var(--gold3);box-shadow:0 12px 30px rgba(20,41,74,.18)}
+  .set-hd{margin:0 0 18px;text-align:center;font-family:var(--serif);font-size:clamp(20px,4.6vw,24px);font-weight:700;color:var(--gold2);line-height:1.5}
+  .set-row{display:flex;align-items:center;justify-content:center;gap:10px}
+  .set-row i{font-style:normal;font-size:24px;font-weight:800;color:var(--gold2)}
+  .set-n{background:rgba(255,255,255,.08);border:1px solid rgba(226,194,122,.5);border-radius:14px;padding:10px 12px;text-align:center;font-weight:700;font-size:16px;line-height:1.5;min-width:118px}
+  .set-n small{display:block;font-size:13.5px;color:var(--gold2);font-weight:800}
+  .set-out{background:linear-gradient(135deg,var(--gold3),var(--gold));border-radius:14px;padding:12px 16px;text-align:center;font-family:var(--serif);font-weight:700;font-size:18px;line-height:1.45}
+  .set-out small{display:block;font-family:var(--gothic);font-size:13.5px;font-weight:700;margin-top:4px;line-height:1.5}
 
   .gifts{background:linear-gradient(180deg,var(--paper),var(--wash))}
   .gg{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:10px}
@@ -172,8 +188,20 @@
     .rounds,.gg,.who{grid-template-columns:1fr;max-width:560px;margin-left:auto;margin-right:auto}
     .cause-grid{grid-template-columns:1fr;gap:30px}
   }
+  @media (max-width:900px){
+    .set-row{flex-wrap:wrap}
+    .set-row .eq{flex-basis:100%;text-align:center;line-height:1}
+    .set-out{flex-basis:100%}
+  }
   @media (max-width:760px){
     section{padding:64px 0}
+    .set{padding:22px 18px}
+    .set-row{flex-direction:column;gap:6px}
+    .set-row i{line-height:1}
+    .set-n{width:100%;display:flex;align-items:center;gap:12px;text-align:left;padding:10px 14px}
+    .set-n br{display:none}
+    .set-n small{display:inline-block;flex:0 0 auto;border-right:1px solid rgba(226,194,122,.5);padding-right:12px}
+    .set-out{width:100%}
     .scene,.cause-grid{grid-template-columns:1fr;gap:26px}
     .voices,.rounds,.gg,.who{grid-template-columns:1fr}
     .gal{grid-template-columns:1fr 1fr}
@@ -185,6 +213,14 @@
     .host{font-size:13.5px;align-items:flex-start;line-height:1.5}
     th{width:5.6em;padding-right:4px}
     .sp-only{display:inline}.pc-only{display:none}
+  }
+  @media (min-width:901px){
+    .r{flex-direction:row}
+    .r .ph{flex:0 0 300px;aspect-ratio:auto;min-height:100%}
+    .r .body{padding:24px 28px 26px}
+    .r .mid{display:grid;grid-template-columns:1.35fr 1fr;gap:14px;align-items:start}
+    .r .mid .gain{margin-bottom:0}
+    .r .mid .num{margin-top:0}
   }
 </style>
 </head>
@@ -275,8 +311,8 @@
   <div class="wrap">
     <div class="center">
       <span class="eyebrow reveal">全3回の勉強会</span>
-      <h2 class="reveal">内側から順番に、<br>3回で整えていきます。</h2>
-      <p class="reveal" style="margin:0">1回90分。<br>むずかしい言葉は使いません。<br>毎回、ご自分の数字を<br>1つ持ち帰っていただきます。</p>
+      <h2 class="reveal">90分後の帰り道、<br>手元に残るもの。</h2>
+      <p class="reveal" style="margin:0">聞いて「なるほど」で終わりにしません。<br>各回、ご自分の数字を1つ出して、<br>「次に何をするか」まで決めて帰ります。</p>
     </div>
     <div class="rounds">
       <article class="r reveal">
@@ -284,8 +320,9 @@
         <div class="body">
           <div class="tm">① 社長自身を整える</div>
           <h3>社長の財布と、<br>会社の財布</h3>
-          <ul><li>混ざると、何が起きる？</li><li>社長の老後は、誰が守る？</li><li>10分で分かる「守りの順番」</li></ul>
-          <div class="num"><b>持ち帰る数字</b>手元のお金は、<br>何か月分ある？</div>
+          <div class="mid"><div class="gain"><span class="hd">参加すると</span><ul><li>手元のお金が<br><em>あと何か月もつか</em>が分かる</li><li>社長と会社のお金の<br><em>分け方の目安</em>が持てる</li><li>老後に向けて<br><em>何から手をつけるか</em>が決まる</li></ul></div>
+          <div class="num"><b>持ち帰る数字</b>手元のお金は、<br>何か月分ある？</div></div>
+          <p class="talk"><span>話すこと</span>・財布が混ざると何が起きるか<br>・社長の老後は誰が守るか<br>・10分で分かる「守りの順番」</p>
         </div>
       </article>
       <article class="r reveal">
@@ -293,8 +330,9 @@
         <div class="body">
           <div class="tm">② 会社を守る</div>
           <h3>社長が倒れた翌日、<br>会社で何が起きるか</h3>
-          <ul><li>借入・保証・売上と、<br>家族にかかってくる電話</li><li>借入と備えは、セットで考える</li><li>事業を引き継ぐ「入口」</li></ul>
-          <div class="num"><b>持ち帰る数字</b>もしものとき、<br>会社と家族に足りない額は？</div>
+          <div class="mid"><div class="gain"><span class="hd">参加すると</span><ul><li>もしものとき、会社と家族に<br><em>足りない額</em>が分かる</li><li>借入や保証のことを<br><em>家族に何から伝えるか</em>が整う</li><li>事業を引き継ぐときの<br><em>最初の一歩</em>が分かる</li></ul></div>
+          <div class="num"><b>持ち帰る数字</b>もしものとき、<br>会社と家族に<br>足りない額は？</div></div>
+          <p class="talk"><span>話すこと</span>・借入・保証・売上と、家族にかかってくる電話<br>・借入と備えはセットで<br>・事業を引き継ぐ「入口」</p>
         </div>
       </article>
       <article class="r reveal">
@@ -302,10 +340,20 @@
         <div class="body">
           <div class="tm">③ 社員と家族を守る</div>
           <h3>辞めない会社、<br>揉めない家族</h3>
-          <ul><li>家族や社員に<br>引き継いだ後の実例</li><li>社員が辞めない、<br>お金の仕組み</li><li>家族に「残すもの」と<br>「伝えるもの」</li></ul>
-          <div class="num"><b>持ち帰る数字</b>引退までに必要な額と、<br>今の差は？</div>
+          <div class="mid"><div class="gain"><span class="hd">参加すると</span><ul><li>引退までに必要な額と、<br><em>今との差</em>が分かる</li><li>社員が長く働きたくなる<br><em>お金の仕組み</em>の例を知れる</li><li>引き継いだ後の実例から<br><em>自分の場合</em>を考えられる</li></ul></div>
+          <div class="num"><b>持ち帰る数字</b>引退までに必要な額と、<br>今の差は？</div></div>
+          <p class="talk"><span>話すこと</span>・家族や社員に引き継いだ後の実例<br>・社員が辞めないお金の仕組み<br>・家族に「残すもの」と「伝えるもの」</p>
         </div>
       </article>
+    </div>
+    <div class="set reveal">
+      <p class="set-hd">3回そろうと、<br class="sp-only">社長のお金の地図が完成します</p>
+      <div class="set-row">
+        <div class="set-n"><small>第1回</small>手元のお金の<br>月数</div><i>＋</i>
+        <div class="set-n"><small>第2回</small>もしもの<br>不足額</div><i>＋</i>
+        <div class="set-n"><small>第3回</small>引退までの<br>差額</div><i class="eq">＝</i>
+        <div class="set-out">社長のお金の<br>全体設計シート<small>3回ご参加の方に<br>個別にお作りします</small></div>
+      </div>
     </div>
     <p class="pick reveal">気になるテーマの回だけでも、<br class="sp-only">どうぞ。</p>
     <div class="cta reveal"><a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSe99slMD53fyTCkarrRc2v5ulQsy5Jihy-S5gI3nDz0np2CSQ/viewform" target="_blank" rel="noopener">参加する回を選ぶ <small>1分で完了</small></a><span class="hint">回ごとに「会場」か「オンライン」を選べます</span></div>
