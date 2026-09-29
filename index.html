@@ -19,9 +19,9 @@
   img{max-width:100%;display:block}
   a{color:inherit}
   .wrap{max-width:960px;margin:0 auto;padding:0 22px}
-  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:linear-gradient(135deg,#c99a3c,#b98a2e);color:#fff;text-decoration:none;font-weight:800;font-size:20px;border-radius:999px;padding:18px 38px;box-shadow:0 8px 24px rgba(185,138,46,.35);transition:transform .15s}
-  .btn:hover{transform:translateY(-2px)}
-  .btn small{font-size:14px;font-weight:700;opacity:.9}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:#06C755;color:#fff;text-decoration:none;font-weight:900;font-size:19.5px;letter-spacing:.02em;border-radius:999px;padding:18px 38px;box-shadow:0 8px 22px rgba(6,199,85,.32);transition:transform .15s,background .15s}
+  .btn:hover{transform:translateY(-2px);background:#05b34c}
+  .btn small{font-size:13.5px;font-weight:700;opacity:.95}
   .btn:focus-visible{outline:3px solid var(--navy);outline-offset:3px}
 
   /* hero */
@@ -40,7 +40,7 @@
 
   section{padding:72px 0}
   .eyebrow{display:inline-block;font-size:14px;font-weight:800;letter-spacing:.14em;color:var(--gold);margin-bottom:6px}
-  h2{font-family:var(--serif);font-size:clamp(26px,4.4vw,36px);line-height:1.45;margin:0 0 18px;color:var(--navy);text-wrap:balance}
+  h2{font-family:var(--serif);font-size:clamp(23px,6.5vw,28px);line-height:1.45;margin:0 0 18px;color:var(--navy);text-wrap:balance}
   .lead{max-width:40em;color:var(--soft)}
 
   /* worry */
@@ -112,14 +112,14 @@
   footer{text-align:center;font-size:14px;color:var(--soft);padding:26px 0 110px}
 
   .sticky{position:fixed;left:0;right:0;bottom:0;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);box-shadow:0 -4px 20px rgba(0,0,0,.1);padding:12px 16px;display:flex;justify-content:center;z-index:10}
-  .sticky .btn{width:100%;max-width:520px;padding:14px 20px;font-size:18px}
+  .sticky .btn{width:100%;max-width:520px;padding:14px 20px;font-size:19.5px}
 
   .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
   .reveal.on{opacity:1;transform:none}
   @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.btn{transition:none}}
 
   @media (max-width:760px){
-    body{font-size:17px}
+    body{font-size:18px}
     .rounds,.gg,.who{grid-template-columns:1fr}
     .gal{grid-template-columns:1fr 1fr}
     .lect{grid-template-columns:1fr;text-align:center}
@@ -163,7 +163,7 @@
   <div class="wrap">
     <span class="eyebrow reveal">全3回のテーマ</span>
     <h2 class="reveal">守る範囲を、少しずつ広げていく3回</h2>
-    <p class="lead reveal">むずかしい言葉は使いません。各回90分、どの回からでも参加できます。</p>
+    <p class="lead reveal">むずかしい言葉は使いません。<br>各回90分、どの回からでも参加できます。</p>
     <div class="rounds">
       <article class="r reveal">
         <div class="ph" style="background-image:url('img/r1.jpg')"><div class="d"><div class="n">第1回</div><div class="dt">12/3<small>（木）</small></div></div></div>
@@ -203,7 +203,7 @@
     <h2 class="reveal">聞いて終わり、にしない3つのおみやげ</h2>
     <div class="gg">
       <div class="g reveal"><div class="ic">🔢</div><h3>自分の「お金の数字」</h3><p>各回、ご自分の数字を1つ持ち帰れます。</p></div>
-      <div class="g reveal"><div class="ic">🧮</div><h3>個別に30分で計算</h3><p>計算が気になる方は、一緒に計算します（ご希望の方のみ）。</p></div>
+      <div class="g reveal"><div class="ic">🧮</div><h3>個別に30分で計算</h3><p>計算が気になる方は、一緒に計算します。<br>ご希望の方だけで大丈夫です。</p></div>
       <div class="g reveal"><div class="ic">📋</div><h3>全体設計シート</h3><p>3回ご参加の方には「社長のお金の全体設計シート」を個別にお作りします。</p></div>
     </div>
   </div>
@@ -213,7 +213,7 @@
   <div class="wrap">
     <span class="eyebrow reveal">勉強会の様子</span>
     <h2 class="reveal">和やかに、声を出しながら学ぶ場です</h2>
-    <p class="lead reveal">講義を聞くだけでなく、隣の方と話したり、質問したり。はじめての方も、すぐになじめます。</p>
+    <p class="lead reveal">講義を聞くだけでなく、隣の方と話したり、質問したり。<br>はじめての方も、すぐになじめます。</p>
     <div class="gal">
       <img class="reveal" src="img/g2.jpg" alt="参加者が発言している様子" loading="lazy">
       <img class="reveal" src="img/g3.jpg" alt="会場で講義を受ける様子" loading="lazy">
@@ -241,7 +241,7 @@
       <img src="img/lecturer.jpg" alt="講師 森川満章">
       <div>
         <div class="nm">森川 満章<small>講師</small></div>
-        <p>fulfull株式会社 代表取締役。商工会議所のビジネスお助け隊・創業塾 役員として、地域の創業・経営支援にも携わる。むずかしい言葉を使わない「お金の勉強会」を各地で開いています。</p>
+        <p>fulfull株式会社 代表取締役。<br>商工会議所のビジネスお助け隊・創業塾 役員として、地域の創業・経営支援にも携わる。<br>むずかしい言葉を使わない「お金の勉強会」を各地で開いています。</p>
       </div>
     </div>
   </div>
@@ -269,10 +269,10 @@
   <div class="wrap">
     <span class="eyebrow reveal">よくあるご質問</span>
     <h2 class="reveal">はじめての方へ</h2>
-    <details class="reveal"><summary>1回だけの参加でも大丈夫ですか？</summary><p>もちろんです。各回で話が完結するように作っています。気になるテーマの回だけでもどうぞ。</p></details>
-    <details class="reveal"><summary>オンラインはどうやって参加しますか？</summary><p>お申し込みのときに「オンライン」を選んでいただくと、参加用のURLをメールでお送りします。当日はURLを押すだけで入れます。</p></details>
-    <details class="reveal"><summary>家族や従業員と一緒に参加できますか？</summary><p>ぜひご一緒にどうぞ。後継ぎの方、ご家族、従業員の方も参加できます。申込フォームで人数をお知らせください。</p></details>
-    <details class="reveal"><summary>商品をすすめられたりしませんか？</summary><p>勉強会の中で商品のご案内はしません。もっと詳しく聞きたい方だけ、ご希望に応じて個別にお話しします。</p></details>
+    <details class="reveal"><summary>1回だけの参加でも大丈夫ですか？</summary><p>もちろんです。<br>各回で話が完結するように作っています。<br>気になるテーマの回だけでもどうぞ。</p></details>
+    <details class="reveal"><summary>オンラインはどうやって参加しますか？</summary><p>お申し込みのときに「オンライン」を選んでいただくと、参加用のURLをメールでお送りします。<br>当日はURLを押すだけで入れます。</p></details>
+    <details class="reveal"><summary>家族や従業員と一緒に参加できますか？</summary><p>ぜひご一緒にどうぞ。<br>後継ぎの方、ご家族、従業員の方も参加できます。<br>申込フォームで人数をお知らせください。</p></details>
+    <details class="reveal"><summary>自分のケースを、個別に相談できますか？</summary><p>はい、できます。<br>勉強会のあと、ご希望の方には30分ほどで、ご自分の数字を一緒に計算します。<br>申込フォームの「当日聞いてみたいこと」に書いておいていただくと、準備してお待ちしています。</p></details>
   </div>
 </section>
 
