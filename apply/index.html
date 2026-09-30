@@ -205,7 +205,7 @@
       <div class="field"><span class="lb">入力内容</span><div class="sum" id="sum"></div>
         <button type="button" class="edit" data-go="1">参加する回を直す</button>　<button type="button" class="edit" data-go="2">お客様情報を直す</button></div>
       <div class="block" id="agreeBlock">
-        <label class="agree"><input type="checkbox" id="agree"><p><b>個人情報の取り扱いに<br>同意します</b>ご記入いただいた個人情報は、本勉強会の運営およびご連絡のためにのみ使用し、主催者（足柄上商工会）および運営協力者で共同で管理します。ご本人の同意なく、それ以外の目的で使用・第三者へ提供することはありません。</p></label>
+        <label class="agree"><input type="checkbox" id="agree"><p><b>個人情報の取り扱いに<br>同意します</b>ご記入いただいた個人情報は、本勉強会の運営およびご連絡のためにのみ使用し、足柄上商工会および運営協力者で共同で管理します。ご本人の同意なく、それ以外の目的で使用・第三者へ提供することはありません。</p></label>
         <div class="err" style="margin-top:6px">同意にチェックを入れてください</div>
       </div>
       <div class="alert" id="a3"></div>
@@ -221,7 +221,7 @@
     </section>
   </form>
 
-  <p class="foot">FAXでのお申し込みは、<br>チラシ裏面の申込書をご利用ください。<br>FAX 0465-83-3213<br>お問い合わせ：足柄上商工会<br>TEL 0465-83-3211<br><br>主催：足柄上商工会／共催：<span class="nb">東京海上日動火災保険株式会社</span></p>
+  <p class="foot">FAXでのお申し込みは、<br>チラシ裏面の申込書をご利用ください。<br>FAX 0465-83-3213<br>お問い合わせ：足柄上商工会<br>TEL 0465-83-3211<br><br>共催：足柄上商工会・<br><span class="nb">東京海上日動火災保険株式会社</span></p>
 </main>
 
 <div class="bar" id="bar">
@@ -328,7 +328,7 @@
   }
   function calUrl(r,online){
     var p=new URLSearchParams({action:'TEMPLATE',text:'社長のお金の勉強会 '+r.n+'「'+r.t+'」',dates:r.cal+'T060000Z/'+r.cal+'T073000Z',
-      details:'主催：足柄上商工会\n案内ページ：https://mm738966m-boop.github.io/ashigarakami-seminar/',
+      details:'共催：足柄上商工会・東京海上日動火災保険\n案内ページ：https://mm738966m-boop.github.io/ashigarakami-seminar/',
       location: online?'オンライン（Zoom・参加URLはメールでお届けします）':'足柄上商工会 2階（神奈川県足柄上郡松田町松田惣領2083-2）'});
     return 'https://calendar.google.com/calendar/render?'+p.toString();
   }
