@@ -215,7 +215,7 @@
     <section class="step card done" data-step="4" aria-labelledby="s4" tabindex="-1">
       <div class="big">🎉</div>
       <h2 id="s4">お申し込み、<br>ありがとうございます</h2>
-      <p class="help" style="margin:0">受け付けました。<br>当日お会いできるのを楽しみにしています。</p>
+      <p class="help" style="margin:0">受け付けました。<br>確認のメールをお送りしました。<br>当日お会いできるのを楽しみにしています。</p>
       <ul id="doneList"></ul>
       <div class="next" id="doneNext"></div>
     </section>
@@ -337,8 +337,8 @@
     ROUNDS.forEach(function(r){var v=d[r.k]; if(v==='参加しない') return; var on=v==='オンラインで参加'; if(on) anyOnline=true;
       html+='<li><b>'+r.n+'　'+r.d+'</b><span class="when">15:00〜16:30</span><span class="when">'+(on?'💻 オンライン':'🏢 会場（足柄上商工会 2階）')+'</span><span>「'+esc(r.t)+'」</span><a class="cal" href="'+calUrl(r,on)+'" target="_blank" rel="noopener">📅 カレンダーに入れる</a></li>';});
     document.getElementById('doneList').innerHTML=html;
-    document.getElementById('doneNext').innerHTML=(anyOnline?'<b>オンラインで参加される方へ</b><br>参加用のURLは開催前に、<br>ご記入のメールアドレスへ<br>お送りします。<br><span class="mail">'+esc(d.mail)+'</span><br><br>':'')+
-      '見逃した回は、<br>後日録画でご覧いただけます。<br><br>ご不明な点は、足柄上商工会<br>（TEL 0465-83-3211）まで<br>お問い合わせください。<br><br><a href="../">勉強会の案内ページに戻る</a>';
+    document.getElementById('doneNext').innerHTML=(anyOnline?'<b>オンラインで参加される方へ</b><br>参加用のURLは各回の前日に、<br>ご記入のメールアドレスへ<br>お送りします。<br><span class="mail">'+esc(d.mail)+'</span><br><br>':'')+
+      '見逃した回は、<br>後日録画でご覧いただけます。<br><br>確認のメールが届かないときは、<br>迷惑メールのフォルダもご覧ください。<br><br>ご不明な点は、足柄上商工会<br>（TEL 0465-83-3211）まで<br>お問い合わせください。<br><br><a href="../">勉強会の案内ページに戻る</a>';
     show(4);
     setTimeout(function(){document.querySelector('.done').focus({preventScroll:true});},350);
   }

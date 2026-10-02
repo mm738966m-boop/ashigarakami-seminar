@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>個別相談（30分）のご予約｜社長のお金の勉強会</title>
+<meta name="description" content="勉強会の宿題の数字を、30分で一緒に出します。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="個別相談（30分）のご予約｜社長のお金の勉強会">
+<meta property="og:description" content="勉強会の宿題の数字を、30分で一緒に出します。">
+<meta property="og:image" content="https://mm738966m-boop.github.io/ashigarakami-seminar/img/ogp.jpg">
+<meta property="og:url" content="https://mm738966m-boop.github.io/ashigarakami-seminar/soudan/">
+<meta name="robots" content="noindex">
+<style>
+  :root{--navy:#14294a;--gold:#a8791f;--gold2:#e2c27a;--gold3:#c9a14a;--cream:#fbf6ea;--paper:#fffdf8;--ink:#1b2433;--soft:#4a5466;--line:#e3dac6;--wash:#f1f4f9;--green:#06C755;--green2:#05b34c;--err:#b3261e;
+    --serif:"Hiragino Mincho ProN","Yu Mincho",serif;--gothic:"Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic","Meiryo",sans-serif}
+  *{box-sizing:border-box}
+  html{color-scheme:light}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--gothic);font-size:18px;font-weight:500;line-height:1.8;font-feature-settings:"palt" 1}
+  .wrap{max-width:640px;margin:0 auto;padding:0 18px}
+  .nb{display:inline-block}
+  header.top{background:var(--navy) url('../img/hero.jpg') center 30%/cover;position:relative;color:#fff}
+  header.top::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,24,48,.72),rgba(10,24,48,.93))}
+  header.top .wrap{position:relative;padding:22px 18px 26px}
+  .brand{font-size:14.5px;font-weight:700;color:var(--gold2);letter-spacing:.06em}
+  h1{font-family:var(--serif);font-size:clamp(26px,7vw,32px);line-height:1.4;margin:6px 0 8px}
+  .lead{margin:0;font-size:16.5px;color:#e6ebf3;line-height:1.7}
+  .lead b{color:#fff}
+  .back{display:inline-block;margin-top:10px;color:#fff;font-size:15px;opacity:.9}
+
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:22px 0 18px}
+  .steps div{text-align:center;font-size:14.5px;font-weight:800;color:#9aa1ad}
+  .steps div::before{content:"";display:block;height:6px;border-radius:9px;background:#e4e6ea;margin-bottom:6px}
+  .steps div.on{color:var(--navy)}
+  .steps div.on::before{background:var(--gold3)}
+  .steps div.done::before{background:var(--navy)}
+
+  .card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px 18px 24px;box-shadow:0 6px 22px rgba(20,41,74,.06)}
+  .card h2{font-family:var(--serif);font-size:23px;color:var(--navy);margin:0 0 6px;line-height:1.45}
+  .card .help{margin:0 0 16px;font-size:16px;color:var(--soft);line-height:1.7}
+  .step{display:none}
+  .step.show{display:block;animation:fade .3s ease}
+  @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  @media (prefers-reduced-motion:reduce){.step.show{animation:none}}
+
+  /* 回の選択 */
+  .round{border:1.5px solid var(--line);border-radius:16px;padding:14px 14px 16px;margin-top:14px;transition:border-color .15s,background .15s}
+  .round.picked{border-color:var(--gold3);background:#fffaf0}
+  .round .rh{display:flex;align-items:center;gap:12px;margin-bottom:10px}
+  .round .dt{flex:0 0 auto;background:var(--navy);color:#fff;border-radius:12px;padding:6px 8px;text-align:center;line-height:1.2;min-width:72px}
+  .round .dt small{display:block;font-size:13.5px;color:var(--gold2);font-weight:800}
+  .round .dt b{font-size:21px}
+  .round .th{font-weight:800;color:var(--navy);line-height:1.5;font-size:16px}
+  .round .th span{display:block;font-size:14px;color:var(--soft);font-weight:700}
+  .opts{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px}
+  .opt{position:relative}
+  .opt input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+  .opt span{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;min-height:64px;border:1.5px solid #cfd4dc;border-radius:12px;background:#fff;font-weight:800;font-size:15.5px;color:var(--ink);text-align:center;line-height:1.3;padding:6px 2px;transition:all .15s;white-space:nowrap}
+  .opt span i{font-style:normal;font-size:20px;line-height:1}
+  .opt input:checked+span{border-color:var(--navy);background:var(--navy);color:#fff}
+  .opt.no span{font-size:14.5px;letter-spacing:-.02em}
+  .opt.no input:checked+span{border-color:#9aa1ad;background:#eef0f3;color:var(--soft)}
+  .opt input:focus-visible+span{outline:3px solid var(--gold3);outline-offset:2px}
+
+  /* 入力欄 */
+  .field{margin-top:18px}
+  .field label.lb,.field .lb{display:flex;align-items:center;gap:8px;font-weight:800;color:var(--navy);font-size:17px}
+  .req,.opt-tag{font-size:13.5px;font-weight:800;border-radius:6px;padding:0 7px;line-height:1.7}
+  .req{background:#fdecea;color:var(--err)}
+  .opt-tag{background:#eef0f3;color:var(--soft)}
+  .field .note{font-size:14.5px;color:var(--soft);margin:2px 0 0;line-height:1.6}
+  input[type=text],input[type=tel],input[type=email],textarea{width:100%;margin-top:6px;font:inherit;font-size:18px;color:var(--ink);background:#fff;border:1.5px solid #cfd4dc;border-radius:12px;padding:12px 14px;outline:none;transition:border-color .15s,box-shadow .15s}
+  textarea{min-height:120px;resize:vertical;line-height:1.7}
+  input:focus,textarea:focus{border-color:var(--navy);box-shadow:0 0 0 3px rgba(20,41,74,.12)}
+  .field.bad input,.field.bad textarea{border-color:var(--err);background:#fffafa}
+  .err{display:none;color:var(--err);font-size:14.5px;font-weight:700;margin-top:4px}
+  .field.bad .err,.block.bad .err{display:block}
+  .nums{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:6px}
+  .nums .opt span{min-height:52px;font-size:17px}
+  .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+
+  /* 確認 */
+  .sum{border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-top:6px}
+  .sum dl{margin:0;display:grid;grid-template-columns:7.2em 1fr}
+  .sum dt,.sum dd{margin:0;padding:10px 12px;border-bottom:1px solid #eee9dc;font-size:16px;line-height:1.6}
+  .sum dt{background:var(--cream);color:var(--navy);font-weight:800}
+  .sum dd{word-break:break-all}
+  .sum dl>*:nth-last-child(-n+2){border-bottom:0}
+  .edit{background:none;border:0;color:var(--gold);font:inherit;font-size:15px;font-weight:800;text-decoration:underline;cursor:pointer;padding:0;margin-top:8px}
+  .agree{display:flex;gap:12px;align-items:flex-start;margin-top:20px;background:var(--wash);border-radius:14px;padding:14px}
+  .agree input{width:26px;height:26px;flex:0 0 auto;margin-top:2px;accent-color:var(--navy)}
+  .agree p{margin:0;font-size:15px;line-height:1.7;color:var(--soft)}
+  .agree b{display:block;color:var(--navy);font-size:16.5px}
+  .block.bad .agree{outline:2px solid var(--err)}
+  .alert{display:none;margin-top:16px;background:#fdecea;color:var(--err);border-radius:12px;padding:12px 14px;font-weight:700;font-size:15.5px;line-height:1.7}
+  .alert.show{display:block}
+
+  /* 完了 */
+  .done{text-align:center}
+  .done .big{font-size:56px;line-height:1}
+  .done h2{margin-top:10px}
+  .done ul{list-style:none;padding:0;margin:14px 0 0;text-align:left}
+  .done li{border:1px solid var(--line);border-radius:14px;padding:12px 14px;margin-top:10px;background:#fff}
+  .done li b{color:var(--navy);display:block;font-size:17px}
+  .done li span{display:block;font-size:15px;color:var(--soft);line-height:1.6}
+  .done li span.when{font-size:16px;color:var(--ink);font-weight:700;margin:2px 0}
+  .done .mail{font-weight:800;color:var(--navy);word-break:break-all}
+  .cal{display:inline-block;margin-top:10px;font-size:15px;font-weight:800;color:var(--navy);border:1.5px solid var(--navy);border-radius:99px;padding:4px 14px;text-decoration:none}
+  .done .next{margin-top:18px;background:var(--cream);border-radius:14px;padding:14px 16px;text-align:left;font-size:16px;line-height:1.75}
+
+  .foot{font-size:14.5px;color:var(--soft);text-align:center;line-height:1.8;padding:26px 0 150px}
+  .foot a{color:var(--soft)}
+
+  /* 下の固定ボタン */
+  .bar{position:fixed;left:0;right:0;bottom:0;background:rgba(255,253,248,.97);box-shadow:0 -4px 18px rgba(0,0,0,.08);padding:10px 16px 12px;z-index:10}
+  .bar .in{max-width:640px;margin:0 auto;display:flex;gap:10px;align-items:center}
+  .btn{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:58px;background:var(--green);color:#fff;border:0;border-radius:999px;font:inherit;font-size:19.5px;font-weight:900;letter-spacing:.02em;cursor:pointer;box-shadow:0 8px 20px rgba(6,199,85,.3);transition:background .15s}
+  .btn:hover{background:var(--green2)}
+  .btn:disabled{opacity:.6;cursor:wait}
+  .btn:focus-visible,.prev:focus-visible{outline:3px solid var(--navy);outline-offset:3px}
+  .prev{flex:0 0 auto;min-height:58px;padding:0 18px;border:1.5px solid #cfd4dc;background:#fff;border-radius:999px;font:inherit;font-size:16.5px;font-weight:800;color:var(--soft);cursor:pointer}
+  .bar .memo{max-width:640px;margin:6px auto 0;text-align:center;font-size:13.5px;color:var(--soft)}
+  .hide{display:none!important}
+  .chk{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:6px}
+  .chk .opt span{min-height:56px;font-size:16px;white-space:normal;padding:6px 8px}
+  .chk.one{grid-template-columns:1fr}
+  .lead2{margin:0 0 6px;font-size:16.5px;line-height:1.75}
+  .gets{list-style:none;padding:0;margin:10px 0 0}
+  .gets li{position:relative;padding:8px 0 8px 32px;border-top:1px solid #eee9dc;font-size:16.5px;line-height:1.6}
+  .gets li:last-child{border-bottom:1px solid #eee9dc}
+  .gets li::before{content:"✓";position:absolute;left:0;top:10px;width:22px;height:22px;border-radius:50%;background:var(--green);color:#fff;font-size:14px;font-weight:900;line-height:22px;text-align:center}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <div class="brand">社長のお金の勉強会／個別相談</div>
+    <h1>宿題の数字を、<br>30分で一緒に出します</h1>
+    <p class="lead">入力は<b>約1分</b>です。<br>日程は、あとから担当の森川がご相談します。</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <noscript><p class="card" style="margin-top:20px">このページは JavaScript を使っています。<br>お手数ですが、勉強会の受付でお声がけください。</p></noscript>
+
+  <form id="f" novalidate>
+    <section class="step show card" data-step="1" aria-labelledby="s1" style="margin-top:22px">
+      <h2 id="s1">30分で、手元に残るもの</h2>
+      <ul class="gets">
+        <li>宿題シートの数字が、<br>実際の金額で出ます</li>
+        <li>数字を見て、<br>次に何から手をつけるかが決まります</li>
+        <li>3回分の数字がそろうと、<br>「社長のお金の全体設計シート」が<br>できあがります</li>
+      </ul>
+
+      <div class="field block" data-k="num" style="margin-top:22px"><span class="lb">一緒に出したい数字 <span class="opt-tag">いくつでも</span></span>
+        <div class="chk">
+          <label class="opt"><input type="checkbox" name="num" value="手元のお金の月数"><span>手元のお金の<br>月数</span></label>
+          <label class="opt"><input type="checkbox" name="num" value="もしもの不足額"><span>もしもの<br>不足額</span></label>
+          <label class="opt"><input type="checkbox" name="num" value="引退までの差額"><span>引退までの<br>差額</span></label>
+          <label class="opt"><input type="checkbox" name="num" value="まだ決めていない"><span>まだ<br>決めていない</span></label>
+        </div>
+      </div>
+
+      <div class="field block" data-k="how"><span class="lb">ご希望の方法 <span class="req">必須</span></span>
+        <div class="chk">
+          <label class="opt"><input type="radio" name="how" value="対面（足柄上商工会）"><span>🏢 対面<br>（商工会で）</span></label>
+          <label class="opt"><input type="radio" name="how" value="オンライン（Zoom）"><span>💻 オンライン<br>（Zoom）</span></label>
+        </div>
+        <label class="opt" style="display:block;margin-top:8px"><input type="radio" name="how" value="どちらでもよい"><span style="min-height:48px;font-size:16px">どちらでもよい</span></label>
+        <div class="err">ご希望の方法を選んでください</div>
+      </div>
+
+      <div class="field block" data-k="when"><span class="lb">ご都合のよい時間帯 <span class="opt-tag">いくつでも</span></span>
+        <div class="chk">
+          <label class="opt"><input type="checkbox" name="when" value="平日の午前"><span>平日の午前</span></label>
+          <label class="opt"><input type="checkbox" name="when" value="平日の午後"><span>平日の午後</span></label>
+          <label class="opt"><input type="checkbox" name="when" value="平日の夕方以降"><span>平日の<br>夕方以降</span></label>
+          <label class="opt"><input type="checkbox" name="when" value="土曜日"><span>土曜日</span></label>
+        </div>
+      </div>
+
+      <div class="field" data-k="name"><label class="lb" for="name">お名前 <span class="req">必須</span></label><input type="text" id="name" name="name" autocomplete="name" placeholder="例：山田 太郎"><div class="err">お名前を入力してください</div></div>
+      <div class="field" data-k="biz"><label class="lb" for="biz">事業所名 <span class="req">必須</span></label><input type="text" id="biz" name="biz" autocomplete="organization" placeholder="例：〇〇工務店"><div class="err">事業所名を入力してください</div></div>
+      <div class="field" data-k="tel"><label class="lb" for="tel">電話番号 <span class="req">必須</span></label><input type="tel" id="tel" name="tel" autocomplete="tel" inputmode="tel" placeholder="例：090-1234-5678"><div class="err">電話番号を入力してください</div></div>
+      <div class="field" data-k="mail"><label class="lb" for="mail">メールアドレス <span class="req">必須</span></label><p class="note">日程のご相談と、受付のお知らせをお送りします。</p><input type="email" id="mail" name="mail" autocomplete="email" inputmode="email" placeholder="例：yamada@example.com"><div class="err">メールアドレスを正しく入力してください</div></div>
+      <div class="field" data-k="note"><label class="lb" for="note">ひとこと <span class="opt-tag">任意</span></label><p class="note">気になっていることがあれば、どうぞ。</p><textarea id="note" name="note" placeholder="例：役員報酬の決め方も相談したい"></textarea></div>
+      <div class="hp" aria-hidden="true"><label>この欄は空のままにしてください<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+
+      <div class="block" id="agreeBlock">
+        <label class="agree"><input type="checkbox" id="agree"><p><b>個人情報の取り扱いに<br>同意します</b>ご記入いただいた個人情報は、個別相談の日程調整とご連絡のためにのみ使用します。<br>ご本人の同意なく、それ以外の目的で使用・第三者へ提供することはありません。</p></label>
+        <div class="err" style="margin-top:6px">同意にチェックを入れてください</div>
+      </div>
+      <div class="alert" id="a1"></div>
+    </section>
+
+    <section class="step card done" data-step="2" aria-labelledby="s2" tabindex="-1" style="margin-top:22px">
+      <div class="big">🎉</div>
+      <h2 id="s2">ご予約、<br>ありがとうございます</h2>
+      <p class="help" style="margin:0">受け付けました。<br>確認のメールをお送りしました。</p>
+      <div class="next">担当の森川から、<br>日程のご相談のご連絡をします。<br>少しだけお待ちください。<br><br>当日は、勉強会で書いた<br>宿題シートをお手元にどうぞ。<br>一緒に数字を出していきます。<br><br><span style="font-size:15px;color:var(--soft)">メールが届かないときは、<br>迷惑メールのフォルダもご覧ください。</span></div>
+    </section>
+  </form>
+
+  <p class="foot">社長のお金の勉強会<br>共催：足柄上商工会・<br><span class="nb">東京海上日動火災保険株式会社</span><br>運営：fulfull株式会社</p>
+</main>
+
+<div class="bar" id="bar">
+  <div class="in"><button type="button" class="btn" id="next">この内容で予約する</button></div>
+  <p class="memo">入力内容は、送信するまで保存されません</p>
+</div>
+
+<script>
+(function(){
+  var API='https://script.google.com/macros/s/AKfycbyopj90DSc9xSbdMT_5hHhXLLMHxBpeuSuPUc2cW9EgDUEQ6GVU55wOzbSxcvQZq5f9OQ/exec';
+  var f=document.getElementById('f'), next=document.getElementById('next'), sending=false;
+  var ref=(new URLSearchParams(location.search).get('ref')||'').slice(0,20);
+  function v(id){var e=document.getElementById(id); return e?(e.value||'').trim():'';}
+  function many(n){return [].map.call(f.querySelectorAll('input[name="'+n+'"]:checked'),function(i){return i.value;}).join('、');}
+  function esc(s){return String(s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+  f.addEventListener('input',function(e){var fl=e.target.closest('.field'); if(fl) fl.classList.remove('bad');});
+  f.addEventListener('change',function(e){var fl=e.target.closest('.field'); if(fl) fl.classList.remove('bad'); if(e.target.id==='agree') document.getElementById('agreeBlock').classList.remove('bad');});
+  function check(){
+    var first=null;
+    var how=many('how'); var hb=f.querySelector('.field[data-k="how"]'); hb.classList.toggle('bad',!how); if(!how) first=hb;
+    ['name','biz','tel','mail'].forEach(function(k){
+      var x=v(k), bad=!x;
+      if(k==='mail'&&x&&!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(x)) bad=true;
+      if(k==='tel'&&x&&x.replace(/[^0-9]/g,'').length<9) bad=true;
+      var fl=f.querySelector('.field[data-k="'+k+'"]'); fl.classList.toggle('bad',bad); if(bad&&!first) first=fl;
+    });
+    if(!first&&!document.getElementById('agree').checked){first=document.getElementById('agreeBlock'); first.classList.add('bad');}
+    if(first){first.scrollIntoView({behavior:'smooth',block:'center'}); return false;}
+    return true;
+  }
+  next.addEventListener('click',function(){
+    if(sending||!check()) return;
+    var data={type:'soudan',ref:ref,name:v('name'),biz:v('biz'),tel:v('tel'),mail:v('mail'),how:many('how'),when:many('when')||'指定なし',num:many('num')||'指定なし',note:v('note'),website:(f.elements.website.value||'')};
+    sending=true; next.disabled=true; next.textContent='送信しています…';
+    fetch(API,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(data)})
+      .then(function(r){return r.json();})
+      .then(function(j){ if(j&&j.ok){ document.querySelector('[data-step="1"]').classList.remove('show'); document.querySelector('[data-step="2"]').classList.add('show'); document.getElementById('bar').classList.add('hide'); window.scrollTo({top:0,behavior:'smooth'}); } else fail(j&&j.error); })
+      .catch(function(){ fail(); });
+  });
+  function fail(msg){
+    sending=false; next.disabled=false; next.textContent='この内容で予約する';
+    var a=document.getElementById('a1'); a.innerHTML=(msg?esc(msg):'送信できませんでした。<br>通信の状態をご確認のうえ、もう一度お試しください。'); a.classList.add('show'); a.scrollIntoView({behavior:'smooth',block:'center'});
+  }
+})();
+</script>
+</body>
+</html>
